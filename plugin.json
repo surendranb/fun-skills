@@ -1,0 +1,17 @@
+{
+  "name": "fun-skills",
+  "version": "1.0.0",
+  "description": "Agent skills for authentic hand-drawn sketchnotes (Doodle Architect) and realistic 2D/2.5D architectural interior scenes (Spatial Architect).",
+  "skills": [
+    {
+      "name": "doodle-architect",
+      "path": "skills/doodle-architect/SKILL.md",
+      "description": "Generates authentic hand-drawn sketchnotes, napkin system diagrams, and editorial doodles in pure zero-JS SVG."
+    },
+    {
+      "name": "spatial-architect",
+      "path": "skills/spatial-architect/SKILL.md",
+      "description": "Build realistic, art-directed SVG interior scenes and 2.5D architectural cross-sections with metric scale and one-point perspective."
+    }
+  ]
+}

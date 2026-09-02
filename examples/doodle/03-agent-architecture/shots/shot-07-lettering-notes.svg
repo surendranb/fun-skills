@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- PALETTE: bg=#ffffff ink=#001858 primary=#f582ae secondary=#8bd3dd accent=#f4d06f white=#ffffff -->
+  <!-- Shot 7: Typography & Hand-Lettering Annotations -->
+
+  <g id="phase-1-substrate">
+    <rect width="100%" height="100%" fill="#ffffff" />
+    <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+          fill="none" stroke="#001858" stroke-width="1.8" opacity="0.30" stroke-linecap="round" />
+    <path d="M 34 38 Q 600 32 1166 36 Q 1172 400 1164 764 Q 600 770 36 762 Q 30 400 34 38" 
+          fill="none" stroke="#001858" stroke-width="1.0" opacity="0.18" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 2: WASHES -->
+  <g id="phase-2-washes">
+    <path d="M 270 48 Q 600 40 930 46 L 924 114 Q 596 122 264 112 Z" fill="#f4d06f" opacity="0.50" />
+    <path d="M 64 244 Q 170 236 276 246 Q 282 370 274 496 Q 170 504 62 492 Z" fill="#8bd3dd" opacity="0.35" />
+    <path d="M 346 164 Q 510 156 676 166 Q 682 290 674 416 Q 510 424 342 412 Z" fill="#f582ae" opacity="0.38" />
+    <path d="M 764 164 Q 930 156 1096 166 Q 1102 290 1094 416 Q 930 424 762 412 Z" fill="#f4d06f" opacity="0.40" />
+    <path d="M 64 474 Q 580 464 1096 474 Q 1102 580 1094 676 Q 580 686 62 674 Z" fill="#8bd3dd" opacity="0.30" />
+    
+    <!-- Tape strips -->
+    <polygon points="130,225 190,220 188,236 128,241" fill="#f4d06f" opacity="0.65" />
+    <polygon points="470,145 530,140 528,156 468,161" fill="#f4d06f" opacity="0.65" />
+    <polygon points="880,145 940,140 938,156 878,161" fill="#f4d06f" opacity="0.65" />
+    
+    <!-- Sub-tool washes -->
+    <path d="M 94 544 Q 200 538 306 544 L 302 626 Q 200 632 98 626 Z" fill="#f4d06f" opacity="0.45" />
+    <path d="M 354 544 Q 460 538 566 544 L 562 626 Q 460 632 358 626 Z" fill="#f582ae" opacity="0.45" />
+    <path d="M 614 544 Q 720 538 826 544 L 822 626 Q 720 632 618 626 Z" fill="#8bd3dd" opacity="0.45" />
+    <path d="M 874 544 Q 970 538 1066 544 L 1062 626 Q 970 632 878 626 Z" fill="#f4d06f" opacity="0.45" />
+  </g>
+
+  <!-- PHASE 3: ACCENTS -->
+  <g id="phase-3-accents">
+    <path d="M 360 102 Q 600 108 840 100" fill="none" stroke="#f582ae" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 370 208 Q 510 212 640 206" fill="none" stroke="#f4d06f" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 4: STROKES -->
+  <g id="phase-4-strokes">
+    <!-- Header -->
+    <path d="M 264 46 Q 600 38 934 44 Q 938 82 932 118 Q 600 126 258 116 Q 256 80 264 46 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 262 48 Q 600 40 936 42 L 930 116 Q 600 124 256 114 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    
+    <!-- 1. Perception -->
+    <path d="M 58 238 Q 170 230 282 240 Q 288 365 280 502 Q 168 510 56 498 Q 50 365 58 238 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 56 240 Q 170 232 284 238 Q 286 365 278 500 Q 168 508 54 496 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 80 320 Q 170 314 260 320 Q 264 348 258 376 Q 168 382 78 376 Q 76 348 80 320 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    
+    <!-- 2. Planner (Hero) -->
+    <path d="M 338 158 Q 510 150 682 160 Q 688 285 680 422 Q 508 430 336 418 Q 330 285 338 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 336 160 Q 510 152 684 158 Q 686 285 678 420 Q 508 428 334 416 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" stroke-linecap="round" />
+    <path d="M 360 250 Q 510 244 660 250 Q 664 300 658 350 Q 508 356 358 350 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Star Metaphor on Core -->
+    <polygon points="510,132 516,146 532,148 520,160 523,176 510,168 497,176 500,160 488,148 504,146" 
+             fill="#f4d06f" stroke="#001858" stroke-width="2.0" stroke-linejoin="round" />
+    
+    <!-- 3. Memory Vault -->
+    <path d="M 758 158 Q 930 150 1102 160 Q 1108 285 1100 422 Q 928 430 756 418 Q 750 285 758 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 780 250 Q 930 244 1080 250 Q 1084 300 1078 350 Q 928 356 778 350 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="1065" cy="180" r="8" fill="none" stroke="#001858" stroke-width="2.2" />
+    <path d="M 1063 186 L 1060 196 L 1070 196 L 1067 186 Z" fill="#001858" />
+    
+    <!-- 4. Tool Sandbox Frame -->
+    <path d="M 58 468 Q 580 458 1102 468 Q 1108 575 1100 682 Q 580 692 56 680 Q 50 575 58 468 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Sub-Tool Boxes -->
+    <path d="M 90 540 Q 200 534 310 540 Q 314 580 308 630 Q 198 636 88 630 Z" fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 350 540 Q 460 534 570 540 Q 574 580 568 630 Q 458 636 348 630 Z" fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 610 540 Q 720 534 830 540 Q 834 580 828 630 Q 718 636 608 630 Z" fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 870 540 Q 970 534 1070 540 Q 1074 580 1068 630 Q 968 636 868 630 Z" fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 5: CONNECTORS -->
+  <g id="phase-5-connectors">
+    <!-- Perception -> Core Arrow -->
+    <path d="M 284 348 Q 310 320 334 320" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 318 308 L 338 320 L 318 332" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Core -> Memory Query / Save Loop -->
+    <path d="M 684 220 Q 720 200 754 215" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" />
+    <path d="M 740 202 L 758 216 L 736 228" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <path d="M 758 350 Q 720 370 684 355" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" />
+    <path d="M 700 368 L 682 354 L 704 342" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Core -> Tool Sandbox Loop -->
+    <path d="M 450 422 Q 430 445 450 466" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 440 452 L 452 468 L 464 452" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <path d="M 570 466 Q 590 445 570 422" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 560 436 L 570 420 L 580 436" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 6: LETTERING -->
+  <g id="phase-6-lettering" style="font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;">
+    <text x="600" y="86" font-size="34" font-weight="bold" text-anchor="middle" fill="#001858">AUTONOMOUS AGENT: STAR-MEMORY LOOP</text>
+    <text x="600" y="142" font-size="19" font-weight="600" text-anchor="middle" fill="#001858" opacity="0.85">Perception · Autoregressive Planning Core · Episodic Memory Vault · MCP Tool Fleet</text>
+    
+    <!-- 1. Perception -->
+    <text x="170" y="278" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">1. Perception Stream</text>
+    <text x="170" y="352" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">USER_PROMPT</text>
+    <text x="170" y="415" font-size="15" text-anchor="middle" fill="#001858">Token Rate Limiter</text>
+    <text x="170" y="440" font-size="14" text-anchor="middle" fill="#001858" opacity="0.8">Context Packager</text>
+    <text x="170" y="465" font-size="14" text-anchor="middle" fill="#001858" opacity="0.8">System Prompt Injection</text>
+    
+    <!-- 2. Planner Core -->
+    <text x="510" y="196" font-size="26" font-weight="bold" text-anchor="middle" fill="#001858">2. Reasoning Core (Star)</text>
+    <text x="510" y="238" font-size="16" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">PLANNER_RESPONSE</text>
+    <text x="510" y="280" font-size="16" text-anchor="middle" fill="#001858">Chain-of-Thought (CoT)</text>
+    <text x="510" y="305" font-size="15" text-anchor="middle" fill="#001858">Deterministic Verification</text>
+    <text x="510" y="330" font-size="15" text-anchor="middle" fill="#001858">Self-Correction Feedback Loop</text>
+    <text x="510" y="395" font-size="15" font-weight="bold" text-anchor="middle" fill="#001858">"Stop on first broken assertion!"</text>
+    
+    <!-- 3. Memory Vault -->
+    <text x="930" y="196" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">3. Memory Vault</text>
+    <text x="930" y="238" font-size="16" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">EPISODIC_RAG</text>
+    <text x="930" y="280" font-size="16" text-anchor="middle" fill="#001858">Vector Embeddings</text>
+    <text x="930" y="305" font-size="15" text-anchor="middle" fill="#001858">Obsidian Brain Notes</text>
+    <text x="930" y="330" font-size="15" text-anchor="middle" fill="#001858">Compounding Experience</text>
+    <text x="930" y="395" font-size="15" font-weight="bold" text-anchor="middle" fill="#001858">"Never repeat past mistakes"</text>
+    
+    <!-- 4. Tool Sandbox Fleet -->
+    <text x="580" y="508" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">4. Model Context Protocol (MCP) &amp; Execution Sandbox</text>
+    
+    <text x="200" y="572" font-size="18" font-weight="bold" text-anchor="middle" fill="#001858">Local Filesystem</text>
+    <text x="200" y="600" font-size="14" font-family="'JetBrains Mono', monospace" text-anchor="middle" fill="#001858">git, ast, diff</text>
+    
+    <text x="460" y="572" font-size="18" font-weight="bold" text-anchor="middle" fill="#001858">Terminal Sandbox</text>
+    <text x="460" y="600" font-size="14" font-family="'JetBrains Mono', monospace" text-anchor="middle" fill="#001858">isolated zsh shell</text>
+    
+    <text x="720" y="572" font-size="18" font-weight="bold" text-anchor="middle" fill="#001858">Remote MCP Fleet</text>
+    <text x="720" y="600" font-size="14" font-family="'JetBrains Mono', monospace" text-anchor="middle" fill="#001858">Linear, DB, BigQuery</text>
+    
+    <text x="970" y="572" font-size="18" font-weight="bold" text-anchor="middle" fill="#001858">Headless Browser</text>
+    <text x="970" y="600" font-size="14" font-family="'JetBrains Mono', monospace" text-anchor="middle" fill="#001858">Chrome DevTools</text>
+    
+    <text x="580" y="662" font-size="16" font-style="italic" text-anchor="middle" fill="#001858">Action Loop: Tool Execution ➜ Structured Observation ➜ Reactive Wakeup</text>
+  </g>
+</svg>

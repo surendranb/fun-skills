@@ -1,0 +1,17 @@
+[project]
+name = "fun-skills"
+version = "1.0.0"
+description = "Deterministic evaluation and agent skills for hand-drawn sketchnotes and architectural scenes."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=10.0.0",
+]
+
+[project.scripts]
+eval-doodle = "skills.doodle_architect.scripts.eval_doodle:main"
+eval-spatial = "skills.spatial_architect.scripts.eval_spatial:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

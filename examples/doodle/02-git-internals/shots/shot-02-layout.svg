@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 2: Structured Spatial Grid & Layout Architecture -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <!-- Outer Frame -->
+  <rect x="30" y="30" width="1140" height="740" fill="none" stroke="#cccccc" stroke-width="1" stroke-dasharray="4,4" />
+  
+  <!-- Header Wireframe -->
+  <rect x="250" y="45" width="700" height="70" fill="none" stroke="#666666" stroke-width="1.5" />
+  <text x="600" y="85" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle" fill="#333333">GIT INTERNALS: OBJECT GRAPH</text>
+  
+  <!-- Left Column: References -->
+  <rect x="60" y="160" width="220" height="260" fill="none" stroke="#666666" stroke-width="1.5" />
+  <text x="170" y="195" font-family="'Courier New', monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">[ 1. References ]</text>
+  <rect x="80" y="220" width="180" height="50" fill="none" stroke="#999999" stroke-width="1" />
+  <text x="170" y="250" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" fill="#666666">HEAD</text>
+  <rect x="80" y="320" width="180" height="50" fill="none" stroke="#999999" stroke-width="1" />
+  <text x="170" y="350" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" fill="#666666">refs/heads/main</text>
+  
+  <!-- Center Column: Commit Object -->
+  <rect x="340" y="160" width="340" height="260" fill="none" stroke="#333333" stroke-width="2" />
+  <text x="510" y="195" font-family="'Courier New', monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="#111111">[ 2. Commit: e4b901 ]</text>
+  <rect x="360" y="260" width="300" height="120" fill="none" stroke="#666666" stroke-width="1" />
+  <text x="510" y="300" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" fill="#444444">tree a8f219 | parent 7c4d12</text>
+  
+  <!-- Right Column Top: Tree Object -->
+  <rect x="760" y="160" width="340" height="230" fill="none" stroke="#666666" stroke-width="1.5" />
+  <text x="930" y="195" font-family="'Courier New', monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">[ 3. Tree: a8f219 ]</text>
+  <rect x="780" y="260" width="300" height="110" fill="none" stroke="#999999" stroke-width="1" />
+  <text x="930" y="300" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" fill="#555555">100644 blob 3b18e5 index.js</text>
+  
+  <!-- Right Column Bottom: Blobs -->
+  <rect x="760" y="440" width="340" height="230" fill="none" stroke="#666666" stroke-width="1.5" />
+  <text x="930" y="475" font-family="'Courier New', monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">[ 4. Blobs (Content) ]</text>
+  <rect x="780" y="500" width="300" height="60" fill="none" stroke="#999999" stroke-width="1" />
+  <text x="930" y="535" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" fill="#555555">blob 3b18e5: index.js</text>
+  
+  <!-- Bottom Banner: Storage Principle -->
+  <rect x="60" y="470" width="620" height="200" fill="none" stroke="#666666" stroke-width="1.5" />
+  <text x="370" y="510" font-family="'Courier New', monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">[ Content-Addressable Storage ]</text>
+  <text x="370" y="560" font-family="'Courier New', monospace" font-size="14" text-anchor="middle" fill="#555555">SHA-1 hash of contents = immutable key</text>
+</svg>

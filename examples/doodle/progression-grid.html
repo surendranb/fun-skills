@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doodle Architect — 8-Shot Visual Progression Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fef6e4;
+      --navy: #001858;
+      --pink: #f582ae;
+      --teal: #8bd3dd;
+      --amber: #f4d06f;
+      --white: #ffffff;
+      --card-border: rgba(0, 24, 88, 0.15);
+      --font-hand: 'Caveat', cursive, sans-serif;
+      --font-body: 'Patrick Hand', cursive, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--navy);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      padding: 32px 24px 80px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-hand);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      color: var(--navy);
+      opacity: 0.85;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .tab-btn {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px var(--navy);
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px var(--navy);
+    }
+
+    .tab-btn.active {
+      background: var(--amber);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px var(--navy);
+    }
+
+    /* PROGRESSION GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    @media (min-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 4px 4px 0px var(--navy);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 8px 0px var(--navy);
+    }
+
+    .card-header {
+      padding: 14px 16px;
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 24, 88, 0.03);
+    }
+
+    .card-step {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--navy);
+      text-transform: uppercase;
+    }
+
+    .tag-fail { background: #ffccd5; color: #990000; }
+    .tag-prog { background: var(--teal); color: var(--navy); }
+    .tag-pass { background: var(--amber); color: var(--navy); }
+    .tag-final { background: var(--pink); color: var(--navy); font-weight: 800; }
+
+    .card-viewport {
+      background: #fafafa;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1200 / 800;
+      border-bottom: 2px solid var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-viewport img, .card-viewport svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: var(--font-hand);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--navy);
+      opacity: 0.85;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .card-law {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--card-border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* LIGHTBOX MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 24, 88, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg);
+      border: 3px solid var(--navy);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 1100px;
+      box-shadow: 12px 12px 0px var(--navy);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 16px 24px;
+      background: var(--white);
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3 {
+      font-family: var(--font-hand);
+      font-size: 28px;
+    }
+
+    .modal-close {
+      background: var(--pink);
+      border: 2px solid var(--navy);
+      font-weight: 700;
+      font-size: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 0px var(--navy);
+    }
+
+    .modal-body {
+      padding: 20px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-body img {
+      max-width: 100%;
+      max-height: 75vh;
+      border: 2px solid var(--navy);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">The Visual Progression Pipeline</div>
+    <h1>From Zero-Shot Slop to Hand-Inked Masterpiece</h1>
+    <p class="subtitle">Why LLMs fail at sketch graphics, and how mathematical wrist physics, multi-tiered inking, and declarative GPU paper shaders turn raw autoregressive tokens into world-class editorial sketchnotes.</p>
+    
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchExample('raft')">Example 1: Raft Consensus</button>
+      <button class="tab-btn" onclick="switchExample('git')">Example 2: Git Internals</button>
+    </div>
+  </header>
+
+  <!-- RAFT PROGRESSION GRID -->
+  <div id="grid-raft" class="grid">
+    <!-- Shot 1 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 01 / 08</span>
+        <span class="card-tag tag-fail">0-Shot Slop</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-01-zero-shot.svg', 'Shot 01: Naive Zero-Shot Clip-Art')">
+        <img src="01-raft-consensus/shots/shot-01-zero-shot.svg" alt="Shot 1">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-Shot Geometric Slop</div>
+        <div class="card-desc">Standard LLM output. Sterile &lt;rect&gt; primitives, clashing primary fills (#ff0000, #00ff00), razor-sharp right angles, centered Arial text.</div>
+        <div class="card-law">Failure: No motor control kinematics</div>
+      </div>
+    </div>
+
+    <!-- Shot 2 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 02 / 08</span>
+        <span class="card-tag tag-prog">Wireframe</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-02-layout.svg', 'Shot 02: Spatial Layout Wireframe')">
+        <img src="01-raft-consensus/shots/shot-02-layout.svg" alt="Shot 2">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Spatial Blueprint & Grid</div>
+        <div class="card-desc">Organizing the coordinate topology. Balanced 3-node cluster, client request on left, quorum consensus box anchored at the base.</div>
+        <div class="card-law">Law: Topologically ordered layout</div>
+      </div>
+    </div>
+
+    <!-- Shot 3 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 03 / 08</span>
+        <span class="card-tag tag-prog">Kinematics</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-03-bowing.svg', 'Shot 03: Wrist Bowing & Overshoot')">
+        <img src="01-raft-consensus/shots/shot-03-bowing.svg" alt="Shot 3">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Wrist Bowing (Wood et al.)</div>
+        <div class="card-desc">Replacing Euclidean lines with chord-normal Bézier curves (d_bow) and ±2px corner overshoots. Eliminates computer perfection.</div>
+        <div class="card-law">Law: d_bow = κ · (L/200) · N(0,1)</div>
+      </div>
+    </div>
+
+    <!-- Shot 4 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 04 / 08</span>
+        <span class="card-tag tag-prog">Hierarchy</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-04-stroke-hierarchy.svg', 'Shot 04: Stroke Hierarchy')">
+        <img src="01-raft-consensus/shots/shot-04-stroke-hierarchy.svg" alt="Shot 4">
+      </div>
+      <div class="card-body">
+        <div class="card-title">3-Tier Stroke Hierarchy</div>
+        <div class="card-desc">Bold 4.0px hero container for Leader, 2.0px component boxes, 1.2px interior lines and dual-pass sketchy retracing.</div>
+        <div class="card-law">Law: 3 distinct stroke tiers</div>
+      </div>
+    </div>
+
+    <!-- Shot 5 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 05 / 08</span>
+        <span class="card-tag tag-pass">Phase 2 Washes</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-05-washes.svg', 'Shot 05: Offset Watercolor Washes')">
+        <img src="01-raft-consensus/shots/shot-05-washes.svg" alt="Shot 5">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Offset Watercolor Washes</div>
+        <div class="card-desc">Semi-translucent washes (#f582ae, #8bd3dd, #f4d06f) placed in &lt;g id="phase-2-washes"&gt; displaced 4–8px outside ink borders.</div>
+        <div class="card-law">Law: Wash in Phase 2 behind ink</div>
+      </div>
+    </div>
+
+    <!-- Shot 6 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 06 / 08</span>
+        <span class="card-tag tag-pass">Metaphors</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-06-connectors-metaphors.svg', 'Shot 06: Connectors & Metaphors')">
+        <img src="01-raft-consensus/shots/shot-06-connectors-metaphors.svg" alt="Shot 6">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Causal Arcs & Metaphors</div>
+        <div class="card-desc">Hand-drawn curved connector arrows, AppendEntries RPC envelope, Leader crown, election countdown timer dial, quorum checkmark.</div>
+        <div class="card-law">Law: Visual metaphor wit</div>
+      </div>
+    </div>
+
+    <!-- Shot 7 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 07 / 08</span>
+        <span class="card-tag tag-pass">Typography</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-07-lettering-notes.svg', 'Shot 07: Hand-Lettering & Annotations')">
+        <img src="01-raft-consensus/shots/shot-07-lettering-notes.svg" alt="Shot 7">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hand-Lettered Typography</div>
+        <div class="card-desc">Caveat and Patrick Hand font stack, handwritten annotations ("Resets on heartbeat!"), yellow tape strips, underline markers.</div>
+        <div class="card-law">Law: Hand lettering + tape accents</div>
+      </div>
+    </div>
+
+    <!-- Shot 8 -->
+    <div class="card" style="border-color: var(--pink); border-width: 3px;">
+      <div class="card-header" style="background: rgba(245, 130, 174, 0.15);">
+        <span class="card-step">SHOT 08 / 08</span>
+        <span class="card-tag tag-final">★ Production</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('01-raft-consensus/shots/shot-08-paper-texture-final.svg', 'Shot 08: Masterpiece with GPU Paper Texture')">
+        <img src="01-raft-consensus/shots/shot-08-paper-texture-final.svg" alt="Shot 8">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-JS GPU Paper Texture</div>
+        <div class="card-desc">Declarative SVG &lt;feTurbulence&gt; + &lt;feDiffuseLighting&gt; cotton-rag paper grain, stroke displacement map. Fully self-contained.</div>
+        <div class="card-law">Mastery: Pure declarative SVG shaders</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GIT PROGRESSION GRID -->
+  <div id="grid-git" class="grid" style="display: none;">
+    <!-- Shot 1 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 01 / 08</span>
+        <span class="card-tag tag-fail">0-Shot Slop</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-01-zero-shot.svg', 'Git Shot 01: Naive Clip-Art')">
+        <img src="02-git-internals/shots/shot-01-zero-shot.svg" alt="Shot 1">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-Shot Geometric Slop</div>
+        <div class="card-desc">Generic rectangles, harsh primary fills, standard Arial text, zero visual hierarchy. Typical unconstrained LLM output.</div>
+        <div class="card-law">Failure: Rigid computer geometry</div>
+      </div>
+    </div>
+
+    <!-- Shot 2 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 02 / 08</span>
+        <span class="card-tag tag-prog">Wireframe</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-02-layout.svg', 'Git Shot 02: Layout Wireframe')">
+        <img src="02-git-internals/shots/shot-02-layout.svg" alt="Shot 2">
+      </div>
+      <div class="card-body">
+        <div class="card-title">DAG Architecture Blueprint</div>
+        <div class="card-desc">Structured 3-tier object model: References (HEAD/main) on left, Commit in center, Tree & Blobs on right, Content-addressable banner below.</div>
+        <div class="card-law">Law: Structured object graph</div>
+      </div>
+    </div>
+
+    <!-- Shot 3 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 03 / 08</span>
+        <span class="card-tag tag-prog">Kinematics</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-03-bowing.svg', 'Git Shot 03: Wrist Bowing & Overshoot')">
+        <img src="02-git-internals/shots/shot-03-bowing.svg" alt="Shot 3">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Wrist Bowing & Inking</div>
+        <div class="card-desc">All lines converted to curved Bézier spans with chord-normal deflection and corner overshoots. Human hand feel established.</div>
+        <div class="card-law">Law: Wood et al. chord normal bowing</div>
+      </div>
+    </div>
+
+    <!-- Shot 4 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 04 / 08</span>
+        <span class="card-tag tag-prog">Hierarchy</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-04-stroke-hierarchy.svg', 'Git Shot 04: Stroke Hierarchy')">
+        <img src="02-git-internals/shots/shot-04-stroke-hierarchy.svg" alt="Shot 4">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Multi-Tier Stroke Hierarchy</div>
+        <div class="card-desc">4.0px bold contour on Commit object, 3.5px on References and Tree/Blob containers, 1.8px internal entries with retraced contours.</div>
+        <div class="card-law">Law: Visual weight pacing</div>
+      </div>
+    </div>
+
+    <!-- Shot 5 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 05 / 08</span>
+        <span class="card-tag tag-pass">Phase 2 Washes</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-05-washes.svg', 'Git Shot 05: Offset Watercolor Washes')">
+        <img src="02-git-internals/shots/shot-05-washes.svg" alt="Shot 5">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Offset Watercolor Washes</div>
+        <div class="card-desc">Displaced color washes rendered behind the ink lines: Coral Pink on References & Banner, Amber on Commit, Teal on Tree & Blobs.</div>
+        <div class="card-law">Law: Organic displaced color washes</div>
+      </div>
+    </div>
+
+    <!-- Shot 6 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 06 / 08</span>
+        <span class="card-tag tag-pass">Metaphors</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-06-connectors-metaphors.svg', 'Git Shot 06: Connectors & Pointers')">
+        <img src="02-git-internals/shots/shot-06-connectors-metaphors.svg" alt="Shot 6">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Causal Pointers & Hash Badges</div>
+        <div class="card-desc">Bowed pointer arrows tracing HEAD ➜ main ➜ Commit e4b901 ➜ Tree a8f219 ➜ Blobs. Demonstrates the DAG immutability.</div>
+        <div class="card-law">Law: Causal pointer physics</div>
+      </div>
+    </div>
+
+    <!-- Shot 7 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-step">SHOT 07 / 08</span>
+        <span class="card-tag tag-pass">Typography</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-07-lettering-notes.svg', 'Git Shot 07: Typography & Notes')">
+        <img src="02-git-internals/shots/shot-07-lettering-notes.svg" alt="Shot 7">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hand-Lettered Typography & Notes</div>
+        <div class="card-desc">Caveat headings + JetBrains Mono for commit hashes and blob payloads. Key insight callout explaining 8-byte pointer mechanics.</div>
+        <div class="card-law">Law: Optical typographic alignment</div>
+      </div>
+    </div>
+
+    <!-- Shot 8 -->
+    <div class="card" style="border-color: var(--pink); border-width: 3px;">
+      <div class="card-header" style="background: rgba(245, 130, 174, 0.15);">
+        <span class="card-step">SHOT 08 / 08</span>
+        <span class="card-tag tag-final">★ Production</span>
+      </div>
+      <div class="card-viewport" onclick="openModal('02-git-internals/shots/shot-08-paper-texture-final.svg', 'Git Shot 08: Masterpiece with Paper Texture')">
+        <img src="02-git-internals/shots/shot-08-paper-texture-final.svg" alt="Shot 8">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-JS GPU Paper Texture</div>
+        <div class="card-desc">Tactile cotton-rag archival parchment texture rendered natively via SVG filters. Zero JavaScript dependencies, instant GPU render.</div>
+        <div class="card-law">Mastery: Pure declarative SVG shaders</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 id="modal-title">Inspection</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="Enlarged View">
+    </div>
+  </div>
+</div>
+
+<script>
+  function switchExample(ex) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    if (ex === 'raft') {
+      document.getElementById('grid-raft').style.display = 'grid';
+      document.getElementById('grid-git').style.display = 'none';
+    } else {
+      document.getElementById('grid-raft').style.display = 'none';
+      document.getElementById('grid-git').style.display = 'grid';
+    }
+  }
+
+  function openModal(src, title) {
+    document.getElementById('modal-img').src = src;
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 4: Multi-Tier Stroke Hierarchy & Texture Hatching -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <!-- Outer Frame (1.5px subtle) -->
+  <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+        fill="none" stroke="#001858" stroke-width="1.5" opacity="0.35" stroke-linecap="round" />
+  
+  <!-- Desk Chamfer Top Surface (4.0px Hero) -->
+  <path d="M 58 482 Q 600 474 1142 480 L 1138 748 Q 600 756 62 750 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 58 502 Q 600 496 1142 500" fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+  <!-- Wood grain hatching on desk edge -->
+  <path d="M 80 500 Q 140 498 200 500 M 340 499 Q 420 497 500 499 M 700 498 Q 800 497 900 499" 
+        fill="none" stroke="#001858" stroke-width="1.0" opacity="0.4" />
+  
+  <!-- Felt Desk Mat (2.2px) -->
+  <path d="M 220 522 Q 600 516 980 520 Q 984 620 978 722 Q 600 728 222 724 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 218 524 Q 600 518 982 522 L 980 720 Q 600 726 220 722 Z" 
+        fill="none" stroke="#001858" stroke-width="1.0" opacity="0.35" stroke-linecap="round" />
+  
+  <!-- Curved Ultrawide Display (4.0px Hero + 1.8px inner frame) -->
+  <path d="M 318 142 Q 600 136 882 140 Q 886 300 880 442 Q 600 448 322 444 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 338 160 Q 600 154 862 158 L 860 422 Q 600 428 340 424 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" />
+  <!-- Monitor Arm -->
+  <path d="M 580 446 L 585 530 M 620 446 L 615 530" fill="none" stroke="#001858" stroke-width="3.5" />
+  <ellipse cx="600" cy="530" rx="35" ry="10" fill="#ffffff" stroke="#001858" stroke-width="2.5" />
+  
+  <!-- Anglepoise Architect Desk Lamp (3.5px) -->
+  <circle cx="180" cy="520" r="18" fill="#ffffff" stroke="#001858" stroke-width="3.0" />
+  <path d="M 180 480 L 140 310 L 220 200" fill="none" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 175 480 L 135 310 L 215 200" fill="none" stroke="#001858" stroke-width="1.5" opacity="0.5" />
+  <!-- Tension springs on joints -->
+  <path d="M 152 380 Q 158 370 152 360 Q 146 350 152 340" fill="none" stroke="#001858" stroke-width="1.5" />
+  <path d="M 220 200 L 260 170 Q 285 205 250 235 Z" fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Botanical Monstera Deliciosa (2.5px pot & leaves) -->
+  <path d="M 970 560 L 980 470 Q 1030 465 1080 470 L 1090 560 Q 1030 570 970 560 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Pot Rim & Horizontal Stripes -->
+  <path d="M 965 470 Q 1030 462 1095 470 L 1090 482 Q 1030 476 970 482 Z" fill="#ffffff" stroke="#001858" stroke-width="2.0" />
+  
+  <!-- Monstera Leaves with inky veins -->
+  <path d="M 1030 470 Q 1000 380 940 320 Q 980 300 1020 340 Q 1050 290 1090 330 Q 1060 380 1030 470" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 980 340 Q 1020 370 1030 470" fill="none" stroke="#001858" stroke-width="1.2" opacity="0.6" />
+  <path d="M 1030 470 Q 1070 410 1130 380 Q 1140 430 1100 450 Q 1060 460 1030 470" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 1030 470 Q 980 430 920 420 Q 910 460 960 470 Q 1000 470 1030 470" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Mechanical Keyboard (2.5px case + 1.2px keycaps) -->
+  <path d="M 418 578 Q 560 572 702 576 Q 706 630 700 682 Q 560 688 416 684 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Sketched Keycap Matrix -->
+  <path d="M 435 595 L 685 595 M 435 615 L 685 615 M 435 635 L 685 635 M 435 655 L 685 655" 
+        fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" />
+  <path d="M 460 595 L 460 655 M 500 595 L 500 655 M 540 595 L 540 655 M 580 595 L 580 655 M 620 595 L 620 655 M 660 595 L 660 655" 
+        fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" />
+  
+  <!-- Trackball Mouse -->
+  <path d="M 740 650 Q 730 600 760 590 Q 790 600 780 650 Q 760 660 740 650 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="760" cy="615" r="14" fill="#ffffff" stroke="#001858" stroke-width="2.2" />
+  
+  <!-- Coffee Mug (2.2px) -->
+  <path d="M 260 635 L 262 580 Q 285 575 308 580 L 310 635 Q 285 642 260 635 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 310 590 Q 330 590 330 610 Q 330 625 308 625" fill="none" stroke="#001858" stroke-width="2.2" />
+  
+  <!-- Open Field Notebook -->
+  <path d="M 98 588 L 175 578 L 245 590 L 238 715 L 168 702 L 92 712 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 175 578 L 168 702" fill="none" stroke="#001858" stroke-width="2.0" />
+  <path d="M 110 610 L 160 606 M 110 630 L 160 626 M 110 650 L 160 646" fill="none" stroke="#001858" stroke-width="1.0" opacity="0.5" />
+  <path d="M 185 610 L 230 614 M 185 630 L 230 634 M 185 650 L 230 654" fill="none" stroke="#001858" stroke-width="1.0" opacity="0.5" />
+  
+  <!-- Sleeping Cat on Desk Mat (3.0px contour + fur hatching) -->
+  <path d="M 850 640 Q 860 580 920 580 Q 980 580 1010 620 Q 1020 660 970 675 Q 910 680 860 665 Q 840 655 850 640 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" />
+  <path d="M 865 595 L 855 575 L 880 585" fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linejoin="round" />
+  <path d="M 890 585 L 905 570 L 910 590" fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linejoin="round" />
+  <path d="M 870 615 Q 878 620 885 615 M 892 615 Q 900 620 908 615" fill="none" stroke="#001858" stroke-width="2.2" />
+  <path d="M 1010 645 Q 1035 650 1025 675 Q 1000 685 970 675" fill="none" stroke="#001858" stroke-width="2.5" />
+</svg>

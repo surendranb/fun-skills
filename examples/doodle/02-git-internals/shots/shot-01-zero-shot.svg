@@ -1,0 +1,34 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 1: Naive Zero-Shot LLM Output (Geometric Slop) -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#000000">HOW GIT WORKS</text>
+  
+  <rect x="60" y="180" width="220" height="240" fill="#0000ff" stroke="#000000" stroke-width="2" />
+  <text x="170" y="220" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">HEAD &amp; Main</text>
+  <rect x="80" y="250" width="180" height="40" fill="#ffff00" stroke="#000000" stroke-width="1" />
+  <text x="170" y="275" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">HEAD</text>
+  <rect x="80" y="320" width="180" height="40" fill="#ffff00" stroke="#000000" stroke-width="1" />
+  <text x="170" y="345" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">refs/heads/main</text>
+  
+  <rect x="360" y="180" width="300" height="240" fill="#00ff00" stroke="#000000" stroke-width="2" />
+  <text x="510" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">Commit Object</text>
+  <text x="510" y="260" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">SHA: e4b901</text>
+  <text x="510" y="290" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Tree: a8f219</text>
+  
+  <rect x="760" y="180" width="340" height="200" fill="#ff0000" stroke="#000000" stroke-width="2" />
+  <text x="930" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Tree Object</text>
+  <text x="930" y="260" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">100644 blob 3b18e5 index.js</text>
+  <text x="930" y="290" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">100644 blob 9f02c1 README.md</text>
+  
+  <rect x="760" y="440" width="340" height="200" fill="#ff0000" stroke="#000000" stroke-width="2" />
+  <text x="930" y="480" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Blob Objects</text>
+  <text x="930" y="520" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">blob 3b18e5: index.js</text>
+  
+  <line x1="280" y1="340" x2="360" y2="300" stroke="#000000" stroke-width="2" />
+  <line x1="660" y1="300" x2="760" y2="280" stroke="#000000" stroke-width="2" />
+  <line x1="930" y1="380" x2="930" y2="440" stroke="#000000" stroke-width="2" />
+  
+  <rect x="60" y="500" width="600" height="180" fill="#cccccc" stroke="#000000" stroke-width="1" />
+  <text x="360" y="550" font-family="Arial, sans-serif" font-size="18" fill="#000000" text-anchor="middle">Content Addressable Storage</text>
+</svg>

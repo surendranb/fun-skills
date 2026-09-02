@@ -1,0 +1,27 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 1: Naive Zero-Shot LLM Output for AI Agent Loop -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#000000">AUTONOMOUS AI AGENT ARCHITECTURE</text>
+  
+  <rect x="60" y="240" width="200" height="240" fill="#0000ff" stroke="#000000" stroke-width="2" />
+  <text x="160" y="280" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">1. Ingestion / Sensor</text>
+  <rect x="80" y="320" width="160" height="40" fill="#ffff00" stroke="#000000" stroke-width="1" />
+  <text x="160" y="345" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Input: User Goal</text>
+  
+  <rect x="340" y="160" width="340" height="260" fill="#00ff00" stroke="#000000" stroke-width="2" />
+  <text x="510" y="200" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">2. Reasoning Core (LLM)</text>
+  <text x="510" y="250" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Chain-of-Thought Planner</text>
+  
+  <rect x="760" y="160" width="340" height="230" fill="#ff0000" stroke="#000000" stroke-width="2" />
+  <text x="930" y="200" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Memory Vault</text>
+  <text x="930" y="250" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Vector Embeddings &amp; State</text>
+  
+  <rect x="340" y="470" width="760" height="200" fill="#e0e0e0" stroke="#000000" stroke-width="2" />
+  <text x="720" y="510" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">4. Tool Sandbox Gateway (MCP)</text>
+  <text x="720" y="550" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Filesystem · Terminal Shell · API Connectors · Browser</text>
+  
+  <line x1="260" y1="360" x2="340" y2="290" stroke="#000000" stroke-width="2" />
+  <line x1="680" y1="290" x2="760" y2="275" stroke="#000000" stroke-width="2" />
+  <line x1="510" y1="420" x2="510" y2="470" stroke="#000000" stroke-width="2" />
+</svg>

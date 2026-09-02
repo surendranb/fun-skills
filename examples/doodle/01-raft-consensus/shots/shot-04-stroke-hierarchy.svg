@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 4: Multi-Tier Stroke Hierarchy & Dual-Pass Retracing -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <!-- Outer Page Border (Tier 3: 1.5px subtle) -->
+  <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+        fill="none" stroke="#001858" stroke-width="1.5" opacity="0.35" stroke-linecap="round" />
+  
+  <!-- Title Header Banner (Tier 1: 3.5px bold contour + 1.2px retrace) -->
+  <path d="M 276 46 Q 600 38 924 44 Q 928 82 922 118 Q 600 126 270 116 Q 268 80 276 46 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Retrace pass -->
+  <path d="M 274 48 Q 600 40 926 42 L 920 116 Q 600 124 268 114 Z" 
+        fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+  <text x="600" y="88" font-family="'Caveat', cursive, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#001858">RAFT CONSENSUS ALGORITHM</text>
+  
+  <!-- 1. Client Request Box (Tier 1: 3.5px bold, interior Tier 2: 2.0px) -->
+  <path d="M 58 238 Q 160 232 262 240 Q 268 375 260 522 Q 158 530 56 518 Q 50 375 58 238 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 56 240 Q 160 234 264 238 Q 266 375 258 520 Q 158 528 54 516 Z" 
+        fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+  <text x="160" y="278" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">1. Client Request</text>
+  
+  <path d="M 78 318 Q 160 312 242 320 Q 246 348 240 376 Q 158 382 76 374 Q 74 346 78 318 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+  <text x="160" y="352" font-family="'Patrick Hand', cursive, sans-serif" font-size="18" text-anchor="middle" fill="#001858">SET x = 42</text>
+  
+  <!-- 2. Node S1 Leader (Tier 1: 4.0px bold hero container) -->
+  <path d="M 338 158 Q 510 150 682 160 Q 688 285 680 422 Q 508 430 336 418 Q 330 285 338 158 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 336 160 Q 510 152 684 158 Q 686 285 678 420 Q 508 428 334 416 Z" 
+        fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" stroke-linecap="round" />
+  <text x="510" y="200" font-family="'Caveat', cursive, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#001858">Node S1 (Leader · Term 2)</text>
+  
+  <!-- Log Container (Tier 2: 2.0px) -->
+  <path d="M 362 232 Q 510 224 658 234 Q 662 268 656 302 Q 508 310 360 300 Q 358 266 362 232 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="510" y="272" font-family="'Patrick Hand', cursive, sans-serif" font-size="18" text-anchor="middle" fill="#001858">Log: [Index 1: Term 2: x=42]</text>
+  
+  <!-- State Box (Tier 3: 1.2px) -->
+  <path d="M 362 330 Q 510 324 658 332 Q 662 358 656 386 Q 508 392 360 384 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="1.5" stroke-linecap="round" />
+  <text x="510" y="362" font-family="'Patrick Hand', cursive, sans-serif" font-size="16" text-anchor="middle" fill="#001858">State: COMMITTED (Majority 2/3)</text>
+  
+  <!-- 3. Node S2 Follower (Tier 1: 3.2px) -->
+  <path d="M 758 158 Q 930 150 1102 160 Q 1108 270 1100 392 Q 928 400 756 388 Q 750 270 758 158 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="930" y="200" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Node S2 (Follower)</text>
+  
+  <!-- 4. Node S3 Follower (Tier 1: 3.2px) -->
+  <path d="M 758 438 Q 930 430 1102 440 Q 1108 550 1100 672 Q 928 680 756 668 Q 750 550 758 438 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="930" y="480" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Node S3 (Follower)</text>
+  
+  <!-- 5. Quorum Box (Tier 1: 3.2px) -->
+  <path d="M 338 468 Q 510 460 682 470 Q 688 565 680 672 Q 508 680 336 668 Q 330 565 338 468 Z" 
+        fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="510" y="515" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Quorum Consensus</text>
+  <text x="510" y="565" font-family="'Patrick Hand', cursive, sans-serif" font-size="18" text-anchor="middle" fill="#001858">Majority = (3 / 2) + 1 = 2 Nodes</text>
+  <text x="510" y="605" font-family="'Patrick Hand', cursive, sans-serif" font-size="15" text-anchor="middle" fill="#001858" opacity="0.8">Leader commits when replicated to S2 or S3</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 3: Hand-Drawn Inking & Wrist Bowing (Wood et al.) -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" />
+  
+  <path d="M 264 46 Q 600 38 934 44 Q 938 82 932 118 Q 600 126 258 116 Q 256 80 264 46 Z" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="600" y="88" font-family="'Caveat', cursive, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#001858">AUTONOMOUS AGENT: STAR-MEMORY LOOP</text>
+  
+  <!-- Left: Perception -->
+  <path d="M 58 238 Q 170 230 282 240 Q 288 365 280 502 Q 168 510 56 498 Q 50 365 58 238 Z" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="170" y="278" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">1. Perception Stream</text>
+  
+  <!-- Center: Planner -->
+  <path d="M 338 158 Q 510 150 682 160 Q 688 285 680 422 Q 508 430 336 418 Q 330 285 338 158 Z" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="510" y="196" font-family="'Caveat', cursive, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#001858">2. Reasoning Core (Star)</text>
+  
+  <!-- Right: Memory Vault -->
+  <path d="M 758 158 Q 930 150 1102 160 Q 1108 285 1100 422 Q 928 430 756 418 Q 750 285 758 158 Z" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="930" y="196" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">3. Memory Vault</text>
+  
+  <!-- Bottom: Tools -->
+  <path d="M 58 468 Q 580 458 1102 468 Q 1108 575 1100 682 Q 580 692 56 680 Q 50 575 58 468 Z" 
+        fill="none" stroke="#001858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="580" y="508" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">4. Model Context Protocol (MCP) &amp; Execution Sandbox</text>
+</svg>

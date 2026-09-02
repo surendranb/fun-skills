@@ -1,0 +1,4 @@
+[      35ms] [ERROR] Error: <svg> attribute height: Expected length, "auto". @ http://localhost:8471/examples/doodle/03-rag-pipeline/shots/shot-01-zero-shot.svg:0
+[   45875ms] [ERROR] Error: <svg> attribute height: Expected length, "auto". @ http://localhost:8471/examples/doodle/03-rag-pipeline/shots/shot-01-zero-shot.svg:0
+[  285389ms] [ERROR] Error: <svg> attribute height: Expected length, "auto". @ http://localhost:8471/examples/doodle/03-rag-pipeline/shots/shot-02-loop-and-icons.svg:0
+[  399245ms] [ERROR] Error: <svg> attribute height: Expected length, "auto". @ http://localhost:8471/examples/doodle/03-rag-pipeline/shots/shot-03-final-polish.svg:0

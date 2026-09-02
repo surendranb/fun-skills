@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot 1: Naive Zero-Shot LLM Output for Desk Scene (Geometric Clip-Art) -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#000000">MY DESK SETUP</text>
+  
+  <!-- Flat Desk -->
+  <rect x="100" y="500" width="1000" height="250" fill="#8b5a2b" stroke="#000000" stroke-width="3" />
+  
+  <!-- Flat Monitor -->
+  <rect x="350" y="180" width="500" height="300" fill="#222222" stroke="#000000" stroke-width="4" />
+  <rect x="370" y="200" width="460" height="260" fill="#000088" />
+  <rect x="580" y="480" width="40" height="50" fill="#555555" stroke="#000000" stroke-width="2" />
+  <rect x="520" y="530" width="160" height="20" fill="#555555" stroke="#000000" stroke-width="2" />
+  
+  <!-- Flat Keyboard -->
+  <rect x="420" y="580" width="360" height="90" fill="#dddddd" stroke="#000000" stroke-width="2" />
+  
+  <!-- Flat Lamp -->
+  <rect x="160" y="280" width="120" height="60" fill="#ffff00" stroke="#000000" stroke-width="2" />
+  <line x1="220" y1="340" x2="200" y2="520" stroke="#000000" stroke-width="6" />
+  <circle cx="200" cy="520" r="30" fill="#999999" stroke="#000000" stroke-width="2" />
+  
+  <!-- Flat Plant -->
+  <rect x="900" y="420" width="80" height="100" fill="#cc6600" stroke="#000000" stroke-width="2" />
+  <circle cx="940" cy="380" r="50" fill="#00aa00" />
+  
+  <!-- Flat Coffee Mug -->
+  <rect x="280" y="560" width="60" height="70" fill="#ffffff" stroke="#000000" stroke-width="2" />
+</svg>

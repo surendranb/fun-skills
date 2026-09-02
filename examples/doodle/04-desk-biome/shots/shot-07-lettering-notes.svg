@@ -1,0 +1,161 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- PALETTE: bg=#ffffff ink=#001858 primary=#f582ae secondary=#8bd3dd accent=#f4d06f white=#ffffff -->
+  <!-- Shot 7: Typography & Hand-Lettering Annotations -->
+
+  <g id="phase-1-substrate">
+    <rect width="100%" height="100%" fill="#ffffff" />
+    <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+          fill="none" stroke="#001858" stroke-width="1.8" opacity="0.30" stroke-linecap="round" />
+    <path d="M 34 38 Q 600 32 1166 36 Q 1172 400 1164 764 Q 600 770 36 762 Q 30 400 34 38" 
+          fill="none" stroke="#001858" stroke-width="1.0" opacity="0.18" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 2: WASHES -->
+  <g id="phase-2-washes">
+    <!-- Lamp Light Cone Wash -->
+    <polygon points="250,200 680,680 180,680" fill="#f4d06f" opacity="0.25" />
+    
+    <!-- Desk Solid Wood Wash -->
+    <path d="M 64 486 Q 600 478 1136 484 L 1132 742 Q 600 750 68 744 Z" fill="#f4d06f" opacity="0.30" />
+    
+    <!-- Felt Desk Mat Wash (Teal) -->
+    <path d="M 226 526 Q 600 520 974 524 L 972 716 Q 600 722 228 718 Z" fill="#8bd3dd" opacity="0.35" />
+    
+    <!-- Monitor Bezel & Screen Wash -->
+    <path d="M 324 146 Q 600 140 876 144 L 874 436 Q 600 442 328 438 Z" fill="#001858" opacity="0.10" />
+    <path d="M 344 164 Q 600 158 856 162 L 854 416 Q 600 422 346 418 Z" fill="#8bd3dd" opacity="0.22" />
+    
+    <!-- Monstera Pot (Amber) & Leaves (Teal) -->
+    <path d="M 974 556 L 984 474 Q 1030 468 1076 474 L 1086 556 Z" fill="#f4d06f" opacity="0.50" />
+    <path d="M 950 330 Q 1030 310 1080 340 Q 1060 410 1020 460 Z" fill="#8bd3dd" opacity="0.45" />
+    <path d="M 1030 460 Q 1090 400 1120 420 Q 1100 460 1040 470 Z" fill="#8bd3dd" opacity="0.45" />
+    <path d="M 1030 460 Q 940 410 920 440 Q 940 470 1010 470 Z" fill="#8bd3dd" opacity="0.45" />
+    
+    <!-- Sleeping Cat Wash (Pink) -->
+    <path d="M 856 636 Q 866 584 924 584 Q 976 584 1004 624 Q 1014 656 966 670 Q 914 676 864 660 Z" fill="#f582ae" opacity="0.45" />
+    
+    <!-- Coffee Mug (Pink) & Notebook (Amber) -->
+    <path d="M 264 630 L 266 584 Q 285 578 304 584 L 306 630 Z" fill="#f582ae" opacity="0.50" />
+    <path d="M 104 592 L 172 584 L 238 594 L 232 710 L 166 698 L 98 706 Z" fill="#f4d06f" opacity="0.40" />
+    
+    <!-- Post-it Note (Yellow) & Polaroid Photo (Pink) -->
+    <polygon points="820,130 870,126 868,170 818,174" fill="#f4d06f" opacity="0.75" />
+    <polygon points="230,100 290,95 288,155 228,160" fill="#f582ae" opacity="0.40" />
+  </g>
+
+  <!-- PHASE 3: ACCENTS -->
+  <g id="phase-3-accents">
+    <path d="M 420 102 Q 600 108 780 100" fill="none" stroke="#f582ae" stroke-width="3.5" stroke-linecap="round" />
+    <circle cx="760" cy="615" r="4" fill="#f582ae" />
+  </g>
+
+  <!-- PHASE 4: STROKES -->
+  <g id="phase-4-strokes">
+    <!-- Desk Surface -->
+    <path d="M 58 482 Q 600 474 1142 480 L 1138 748 Q 600 756 62 750 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 58 502 Q 600 496 1142 500" fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    
+    <!-- Felt Desk Mat -->
+    <path d="M 220 522 Q 600 516 980 520 Q 984 620 978 722 Q 600 728 222 724 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Curved Ultrawide Display -->
+    <path d="M 318 142 Q 600 136 882 140 Q 886 300 880 442 Q 600 448 322 444 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 338 160 Q 600 154 862 158 L 860 422 Q 600 428 340 424 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 580 446 L 585 530 M 620 446 L 615 530" fill="none" stroke="#001858" stroke-width="3.5" />
+    <ellipse cx="600" cy="530" rx="35" ry="10" fill="#ffffff" stroke="#001858" stroke-width="2.5" />
+    
+    <!-- Anglepoise Lamp -->
+    <circle cx="180" cy="520" r="18" fill="#ffffff" stroke="#001858" stroke-width="3.0" />
+    <path d="M 180 480 L 140 310 L 220 200" fill="none" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 220 200 L 260 170 Q 285 205 250 235 Z" fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Monstera Deliciosa -->
+    <path d="M 970 560 L 980 470 Q 1030 465 1080 470 L 1090 560 Q 1030 570 970 560 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1030 470 Q 1000 380 940 320 Q 980 300 1020 340 Q 1050 290 1090 330 Q 1060 380 1030 470" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 1030 470 Q 1070 410 1130 380 Q 1140 430 1100 450 Q 1060 460 1030 470" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 1030 470 Q 980 430 920 420 Q 910 460 960 470 Q 1000 470 1030 470" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Mechanical Keyboard -->
+    <path d="M 418 578 Q 560 572 702 576 Q 706 630 700 682 Q 560 688 416 684 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 435 595 L 685 595 M 435 615 L 685 615 M 435 635 L 685 635 M 435 655 L 685 655" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" />
+    
+    <!-- Trackball Mouse -->
+    <path d="M 740 650 Q 730 600 760 590 Q 790 600 780 650 Q 760 660 740 650 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="760" cy="615" r="14" fill="#ffffff" stroke="#001858" stroke-width="2.2" />
+    
+    <!-- Coffee Mug -->
+    <path d="M 260 635 L 262 580 Q 285 575 308 580 L 310 635 Q 285 642 260 635 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 310 590 Q 330 590 330 610 Q 330 625 308 625" fill="none" stroke="#001858" stroke-width="2.2" />
+    
+    <!-- Open Field Notebook -->
+    <path d="M 98 588 L 175 578 L 245 590 L 238 715 L 168 702 L 92 712 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 175 578 L 168 702" fill="none" stroke="#001858" stroke-width="2.0" />
+    
+    <!-- Sleeping Cat on Desk Mat -->
+    <path d="M 850 640 Q 860 580 920 580 Q 980 580 1010 620 Q 1020 660 970 675 Q 910 680 860 665 Q 840 655 850 640 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.0" stroke-linecap="round" />
+    <path d="M 865 595 L 855 575 L 880 585" fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linejoin="round" />
+    <path d="M 890 585 L 905 570 L 910 590" fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linejoin="round" />
+    <path d="M 870 615 Q 878 620 885 615 M 892 615 Q 900 620 908 615" fill="none" stroke="#001858" stroke-width="2.2" />
+  </g>
+
+  <!-- PHASE 5: STORYTELLING CONNECTORS -->
+  <g id="phase-5-connectors">
+    <path d="M 280 570 Q 270 545 285 530 Q 295 515 285 500" fill="none" stroke="#001858" stroke-width="1.8" opacity="0.6" stroke-linecap="round" />
+    <path d="M 560 576 Q 560 550 500 550 Q 480 550 480 540 Q 480 530 500 530 Q 520 530 520 520" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 855 620 L 830 615 M 855 625 L 830 630 M 915 620 L 940 615 M 915 625 L 940 630" fill="none" stroke="#001858" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 230 100 L 290 95 L 288 155 L 228 160 Z" fill="#ffffff" stroke="#001858" stroke-width="2" />
+    <polygon points="250,90 270,88 268,102 248,104" fill="#f4d06f" opacity="0.8" />
+    <path d="M 820 130 L 870 126 L 868 170 L 818 174 Z" fill="#ffffff" stroke="#001858" stroke-width="1.8" />
+    <polygon points="835,120 855,118 853,132 833,134" fill="#f4d06f" opacity="0.8" />
+  </g>
+
+  <!-- PHASE 6: LETTERING & CODE TOKENS -->
+  <g id="phase-6-lettering" style="font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;">
+    <text x="600" y="86" font-size="34" font-weight="bold" text-anchor="middle" fill="#001858">THE MIDNIGHT DESK BIOME</text>
+    <text x="600" y="125" font-size="18" text-anchor="middle" fill="#001858" opacity="0.8">02:15 AM · Agent Stack Live Trace · Chennai Biome</text>
+    
+    <!-- Code on Monitor -->
+    <text x="360" y="200" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" fill="#001858">> agy run --autonomous</text>
+    <text x="360" y="230" font-family="'JetBrains Mono', monospace" font-size="12" fill="#001858">⠋ Step 42: eval_doodle.py ...</text>
+    <text x="360" y="255" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" fill="#001858">✔ STATUS: 100% PASS (0 AST errors)</text>
+    <text x="360" y="285" font-family="'JetBrains Mono', monospace" font-size="12" fill="#001858">Git commit: [fun-skills 437e7ed]</text>
+    <text x="360" y="310" font-family="'JetBrains Mono', monospace" font-size="12" fill="#001858">Linear SUR-293: closed with RCA</text>
+    <text x="360" y="350" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold" fill="#001858">"Never claim — verify."</text>
+    
+    <!-- Post-it Note -->
+    <text x="844" y="152" font-size="14" font-weight="bold" text-anchor="middle" fill="#001858">Ship today!</text>
+    
+    <!-- Polaroid Label -->
+    <text x="258" y="150" font-size="11" text-anchor="middle" fill="#001858">Kyoto 2025</text>
+    
+    <!-- Callout Annotations -->
+    <!-- Coffee -->
+    <path d="M 230 540 Q 250 545 270 560" fill="none" stroke="#001858" stroke-width="1.2" stroke-linecap="round" />
+    <text x="210" y="535" font-size="15" text-anchor="end" fill="#001858">single-origin V60</text>
+    
+    <!-- Cat -->
+    <path d="M 940 565 Q 930 550 910 550" fill="none" stroke="#001858" stroke-width="1.2" stroke-linecap="round" />
+    <text x="910" y="545" font-size="15" text-anchor="middle" fill="#001858">co-pilot in deep REM</text>
+    <text x="975" y="615" font-size="15" font-weight="bold" fill="#001858">Zzz...</text>
+    
+    <!-- Keyboard -->
+    <text x="560" y="715" font-size="15" text-anchor="middle" fill="#001858">custom split ergo 65% + lubricated holy pandas</text>
+    
+    <!-- Notebook -->
+    <text x="165" y="735" font-size="14" text-anchor="middle" fill="#001858">f(t) = d_bow + ε</text>
+  </g>
+</svg>

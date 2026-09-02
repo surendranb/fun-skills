@@ -1,0 +1,144 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- PALETTE: bg=#ffffff ink=#001858 primary=#f582ae secondary=#8bd3dd accent=#f4d06f white=#ffffff -->
+  <!-- Shot 7: Typography & Hand-Lettering Annotations -->
+
+  <g id="phase-1-substrate">
+    <rect width="100%" height="100%" fill="#ffffff" />
+    <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+          fill="none" stroke="#001858" stroke-width="1.8" opacity="0.30" stroke-linecap="round" />
+    <path d="M 34 38 Q 600 32 1166 36 Q 1172 400 1164 764 Q 600 770 36 762 Q 30 400 34 38" 
+          fill="none" stroke="#001858" stroke-width="1.0" opacity="0.18" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 2: WASHES -->
+  <g id="phase-2-washes">
+    <path d="M 270 48 Q 600 40 930 46 L 924 114 Q 596 122 264 112 Z" fill="#f4d06f" opacity="0.50" />
+    <path d="M 64 164 Q 170 156 276 166 Q 282 290 274 416 Q 170 424 62 412 Z" fill="#f582ae" opacity="0.38" />
+    <path d="M 346 164 Q 510 156 676 166 Q 682 290 674 416 Q 510 424 342 412 Z" fill="#f4d06f" opacity="0.40" />
+    <path d="M 764 164 Q 930 156 1096 166 Q 1102 275 1094 386 Q 930 394 762 382 Z" fill="#8bd3dd" opacity="0.35" />
+    <path d="M 764 444 Q 930 436 1096 446 Q 1102 555 1094 666 Q 930 674 762 662 Z" fill="#8bd3dd" opacity="0.35" />
+    <path d="M 64 474 Q 360 466 676 476 Q 682 570 674 666 Q 360 674 62 662 Z" fill="#f582ae" opacity="0.32" />
+    
+    <!-- Tape strips -->
+    <polygon points="130,145 190,140 188,156 128,161" fill="#f4d06f" opacity="0.65" />
+    <polygon points="470,145 530,140 528,156 468,161" fill="#f4d06f" opacity="0.65" />
+    <polygon points="880,145 940,140 938,156 878,161" fill="#f4d06f" opacity="0.65" />
+  </g>
+
+  <!-- PHASE 3: ACCENTS -->
+  <g id="phase-3-accents">
+    <path d="M 360 102 Q 600 108 840 100" fill="none" stroke="#f582ae" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 370 208 Q 510 212 640 206" fill="none" stroke="#f4d06f" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 4: STROKES -->
+  <g id="phase-4-strokes">
+    <!-- Header Banner -->
+    <path d="M 264 46 Q 600 38 934 44 Q 938 82 932 118 Q 600 126 258 116 Q 256 80 264 46 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 262 48 Q 600 40 936 42 L 930 116 Q 600 124 256 114 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    
+    <!-- 1. References Box -->
+    <path d="M 58 158 Q 170 150 282 160 Q 288 285 280 422 Q 168 430 56 418 Q 50 285 58 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 56 160 Q 170 152 284 158 Q 286 285 278 420 Q 168 428 54 416 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 80 218 Q 170 212 260 218 Q 264 246 258 274 Q 168 280 78 274 Q 76 246 80 218 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M 80 320 Q 170 314 260 320 Q 264 348 258 376 Q 168 382 78 376 Q 76 348 80 320 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" />
+    
+    <!-- 2. Commit Object Container -->
+    <path d="M 338 158 Q 510 150 682 160 Q 688 285 680 422 Q 508 430 336 418 Q 330 285 338 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 336 160 Q 510 152 684 158 Q 686 285 678 420 Q 508 428 334 416 Z" 
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.45" stroke-linecap="round" />
+    <path d="M 360 262 Q 510 256 660 262 Q 664 320 658 382 Q 508 388 358 382 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- 3. Tree Object Container -->
+    <path d="M 758 158 Q 930 150 1102 160 Q 1108 270 1100 392 Q 928 400 756 388 Q 750 270 758 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 780 262 Q 930 256 1080 262 Q 1084 315 1078 368 Q 928 374 778 368 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- 4. Blob Object Container -->
+    <path d="M 758 438 Q 930 430 1102 440 Q 1108 550 1100 672 Q 928 680 756 668 Q 750 550 758 438 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 780 500 Q 920 494 1060 500 Q 1064 532 1058 564 Q 918 570 778 564 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 780 584 Q 920 578 1060 584 Q 1064 616 1058 648 Q 918 654 778 648 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.8" stroke-linecap="round" />
+    
+    <!-- 5. Key Concept Box -->
+    <path d="M 58 468 Q 360 460 682 470 Q 688 565 680 672 Q 358 680 56 668 Q 50 565 58 468 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 5: CONNECTORS -->
+  <g id="phase-5-connectors">
+    <!-- HEAD -> main pointer -->
+    <path d="M 170 278 Q 175 298 170 316" fill="none" stroke="#001858" stroke-width="2.8" stroke-linecap="round" />
+    <path d="M 160 304 L 170 318 L 180 304" fill="none" stroke="#001858" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- main -> Commit pointer -->
+    <path d="M 264 348 Q 300 330 334 340" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 320 328 L 338 341 L 316 352" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Commit -> Tree pointer -->
+    <path d="M 684 270 Q 720 250 754 265" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 740 252 L 758 266 L 736 278" fill="none" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Tree -> Blob pointer -->
+    <path d="M 930 394 Q 940 415 930 436" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" />
+    <path d="M 920 422 L 930 438 L 940 422" fill="none" stroke="#001858" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 6: LETTERING -->
+  <g id="phase-6-lettering" style="font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;">
+    <text x="600" y="86" font-size="34" font-weight="bold" text-anchor="middle" fill="#001858">HOW GIT WORKS UNDER THE HOOD</text>
+    <text x="600" y="142" font-size="19" font-weight="600" text-anchor="middle" fill="#001858" opacity="0.85">Content-Addressable Object Database · Directed Acyclic Graph (DAG)</text>
+    
+    <!-- References Column -->
+    <text x="170" y="196" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">1. References</text>
+    <text x="170" y="252" font-size="20" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">HEAD</text>
+    <text x="170" y="300" font-size="14" text-anchor="middle" fill="#001858" opacity="0.75">points to current branch</text>
+    <text x="170" y="354" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">refs/heads/main</text>
+    <text x="170" y="405" font-size="14" text-anchor="middle" fill="#001858" opacity="0.75">lightweight 41-byte pointer!</text>
+    
+    <!-- Commit Column -->
+    <text x="510" y="196" font-size="26" font-weight="bold" text-anchor="middle" fill="#001858">2. Commit Object</text>
+    <text x="510" y="240" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">commit e4b901</text>
+    <text x="380" y="295" font-size="15" font-family="'JetBrains Mono', monospace" fill="#001858">tree a8f219</text>
+    <text x="380" y="325" font-size="15" font-family="'JetBrains Mono', monospace" fill="#001858">parent 7c4d12</text>
+    <text x="380" y="355" font-size="15" font-family="'Patrick Hand', cursive" fill="#001858">author: Alice &lt;alice@git&gt;</text>
+    <text x="380" y="375" font-size="15" font-family="'Patrick Hand', cursive" font-weight="bold" fill="#001858">"Fix auth timeout"</text>
+    
+    <!-- Tree Column -->
+    <text x="930" y="196" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">3. Tree (Directory Snapshot)</text>
+    <text x="930" y="240" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle" fill="#001858">tree a8f219</text>
+    <text x="800" y="295" font-size="15" font-family="'JetBrains Mono', monospace" fill="#001858">100644 blob 3b18e5 index.js</text>
+    <text x="800" y="325" font-size="15" font-family="'JetBrains Mono', monospace" fill="#001858">100644 blob 9f02c1 README.md</text>
+    <text x="800" y="355" font-size="15" font-family="'JetBrains Mono', monospace" fill="#001858">040000 tree d419e0 src/</text>
+    
+    <!-- Blob Column -->
+    <text x="930" y="476" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">4. Blob (Raw File Contents)</text>
+    <text x="800" y="525" font-size="15" font-family="'JetBrains Mono', monospace" font-weight="bold" fill="#001858">blob 3b18e5: index.js</text>
+    <text x="800" y="550" font-size="14" font-family="'JetBrains Mono', monospace" fill="#001858" opacity="0.8">console.log("hello world");</text>
+    <text x="800" y="605" font-size="15" font-family="'JetBrains Mono', monospace" font-weight="bold" fill="#001858">blob 9f02c1: README.md</text>
+    <text x="800" y="630" font-size="14" font-family="'Patrick Hand', cursive" fill="#001858" opacity="0.8"># Project Documentation...</text>
+    
+    <!-- Core Concept Callout Box -->
+    <text x="370" y="505" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">The Golden Rule: Content-Addressable</text>
+    <text x="100" y="560" font-size="17" font-family="'JetBrains Mono', monospace" font-weight="bold" fill="#001858">SHA1(content) ➜ Key</text>
+    <text x="100" y="590" font-size="15" font-family="'Patrick Hand', cursive" fill="#001858">Immutable history: Change 1 bit in a file,</text>
+    <text x="100" y="615" font-size="15" font-family="'Patrick Hand', cursive" fill="#001858">its blob SHA changes ➜ tree SHA changes ➜</text>
+    <text x="100" y="640" font-size="15" font-family="'Patrick Hand', cursive" font-weight="bold" fill="#001858">entire downstream commit tree changes!</text>
+    
+    <text x="400" y="560" font-size="16" font-weight="bold" fill="#001858">Key Insight:</text>
+    <text x="400" y="590" font-size="15" fill="#001858">Branches are NOT copies of files.</text>
+    <text x="400" y="615" font-size="15" fill="#001858">A branch is simply an 8-byte</text>
+    <text x="400" y="640" font-size="15" fill="#001858">pointer pointing to a commit SHA!</text>
+  </g>
+</svg>

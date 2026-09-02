@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Skills Showcase — 8-Shot Visual Progression Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fef6e4;
+      --navy: #001858;
+      --pink: #f582ae;
+      --teal: #8bd3dd;
+      --amber: #f4d06f;
+      --white: #ffffff;
+      --card-border: rgba(0, 24, 88, 0.15);
+      --font-hand: 'Caveat', cursive, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--navy);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      padding: 36px 24px 80px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-hand);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      max-width: 860px;
+      margin: 0 auto 24px;
+      color: var(--navy);
+      opacity: 0.85;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px var(--navy);
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px var(--navy);
+    }
+
+    .tab-btn.active {
+      background: var(--amber);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px var(--navy);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    @media (min-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 4px 4px 0px var(--navy);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 8px 0px var(--navy);
+    }
+
+    .card-header {
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 24, 88, 0.03);
+    }
+
+    .card-step {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--navy);
+      text-transform: uppercase;
+    }
+
+    .tag-fail { background: #ffccd5; color: #990000; }
+    .tag-prog { background: var(--teal); color: var(--navy); }
+    .tag-pass { background: var(--amber); color: var(--navy); }
+    .tag-final { background: var(--pink); color: var(--navy); font-weight: 800; }
+
+    .card-viewport {
+      background: #fafafa;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1200 / 800;
+      border-bottom: 2px solid var(--navy);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .card-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 14px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: var(--font-hand);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--navy);
+      opacity: 0.85;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .card-law {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--card-border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* LIGHTBOX MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 24, 88, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg);
+      border: 3px solid var(--navy);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 12px 12px 0px var(--navy);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 14px 20px;
+      background: var(--white);
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3 {
+      font-family: var(--font-hand);
+      font-size: 26px;
+    }
+
+    .modal-close {
+      background: var(--pink);
+      border: 2px solid var(--navy);
+      font-weight: 700;
+      font-size: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 0px var(--navy);
+    }
+
+    .modal-body {
+      padding: 16px;
+      background: var(--white);
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-body img {
+      max-width: 100%;
+      max-height: 75vh;
+      border: 2px solid var(--navy);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Visual Progression Gallery</div>
+    <h1>Illustrated Scenes &amp; Architectural Spaces</h1>
+    <p class="subtitle">Real illustrated scenes engineered with mathematical wrist kinematics, multi-tiered inking, offset watercolor washes, and metric spatial scale.</p>
+    
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchScene('desk')">🖥️ The Midnight Desk Biome (Doodle Scene)</button>
+      <button class="tab-btn" onclick="switchScene('kissaten')">☕ Kyoto Kissaten (Spatial Scene)</button>
+      <button class="tab-btn" onclick="switchScene('agent')">🤖 Agent Architecture (Doodle)</button>
+      <button class="tab-btn" onclick="switchScene('raft')">⚡ Raft Consensus (Doodle)</button>
+    </div>
+  </header>
+
+  <!-- SCENE 1: DESK BIOME -->
+  <div id="grid-desk" class="grid">
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 01 / 08</span><span class="card-tag tag-fail">0-Shot Slop</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-01-zero-shot.png', 'Shot 01: Naive Desk Clip-Art')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-01-zero-shot.png" alt="Shot 1">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-Shot Geometric Slop</div>
+        <div class="card-desc">Naive LLM desk: flat rectangles, clashing colors, zero motor control physics, sterile computer feel.</div>
+        <div class="card-law">Failure: No kinematic motor model</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 02 / 08</span><span class="card-tag tag-prog">Wireframe</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-02-layout.png', 'Shot 02: Scene Layout Blueprint')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-02-layout.png" alt="Shot 2">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Scene Composition Blueprint</div>
+        <div class="card-desc">Balanced vignette layout: Ultrawide curved monitor in center, anglepoise lamp on left, monstera plant and sleeping cat on right.</div>
+        <div class="card-law">Law: Structured foreground &amp; focal composition</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 03 / 08</span><span class="card-tag tag-prog">Kinematics</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-03-bowing.png', 'Shot 03: Wrist Bowing & Inking')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-03-bowing.png" alt="Shot 3">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Wrist Bowing (Wood et al.)</div>
+        <div class="card-desc">All lines converted to curved Bézier spans with chord-normal deflection and corner overshoots. Human hand feel established.</div>
+        <div class="card-law">Law: d_bow = κ · (L/200) · N(0,1)</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 04 / 08</span><span class="card-tag tag-prog">Hierarchy</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-04-stroke-hierarchy.png', 'Shot 04: Stroke Hierarchy & Hatching')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-04-stroke-hierarchy.png" alt="Shot 4">
+      </div>
+      <div class="card-body">
+        <div class="card-title">3-Tier Stroke Hierarchy</div>
+        <div class="card-desc">4.0px bold contour on monitor &amp; desk, 3.0px on lamp &amp; monstera, 1.2px interior keycaps and wood grain cross-hatching.</div>
+        <div class="card-law">Law: 3 distinct stroke tiers + hatching</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 05 / 08</span><span class="card-tag tag-pass">Phase 2 Washes</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-05-washes.png', 'Shot 05: Offset Watercolor Washes')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-05-washes.png" alt="Shot 5">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Offset Watercolor Washes</div>
+        <div class="card-desc">Warm honey amber desk wash, teal desk mat, mint green monstera leaves, peach sleeping cat, and soft yellow lamp light cone.</div>
+        <div class="card-law">Law: Displaced color washes in Phase 2</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 06 / 08</span><span class="card-tag tag-pass">Metaphors</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-06-connectors-metaphors.png', 'Shot 06: Storytelling Props')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-06-connectors-metaphors.png" alt="Shot 6">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Scene Storytelling Props</div>
+        <div class="card-desc">Steaming coffee wisps, coiled aviator keyboard cable, cat whiskers, pinned polaroid photo with yellow washi tape.</div>
+        <div class="card-law">Law: Environmental narrative details</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 07 / 08</span><span class="card-tag tag-pass">Typography</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-07-lettering-notes.png', 'Shot 07: Hand Lettering & Notes')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-07-lettering-notes.png" alt="Shot 7">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hand Lettering &amp; Code Logs</div>
+        <div class="card-desc">Caveat &amp; Patrick Hand annotations, live terminal agent traces on monitor (> agy run --autonomous), "co-pilot in deep REM", tape notes.</div>
+        <div class="card-law">Law: Typographic annotations &amp; tape accents</div>
+      </div>
+    </div>
+
+    <div class="card" style="border-color: var(--pink); border-width: 3px;">
+      <div class="card-header" style="background: rgba(245, 130, 174, 0.15);"><span class="card-step">SHOT 08 / 08</span><span class="card-tag tag-final">★ Production</span></div>
+      <div class="card-viewport" onclick="openModal('examples/doodle/04-desk-biome/shots/shot-08-paper-texture-final.png', 'Shot 08: Masterpiece with Paper Shaders')">
+        <img src="examples/doodle/04-desk-biome/shots/shot-08-paper-texture-final.png" alt="Shot 8">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero-JS GPU Paper Texture</div>
+        <div class="card-desc">Archival cotton-rag paper grain and stroke friction displacement map. Pure declarative SVG running on the GPU.</div>
+        <div class="card-law">Mastery: 100% Deterministic Eval Valid</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2: KYOTO KISSATEN -->
+  <div id="grid-kissaten" class="grid" style="display: none;">
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 01 / 08</span><span class="card-tag tag-fail">0-Shot Slop</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-01-zero-shot.png', 'Spatial Shot 01: Naive Floating Geometry')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-01-zero-shot.png" alt="Shot 1">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Floating Geometric Slop</div>
+        <div class="card-desc">Naive LLM room output: floating counter, misaligned stools with no floor contact, zero metric grounding.</div>
+        <div class="card-law">Failure: Ungrounded coordinate drift</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 02 / 08</span><span class="card-tag tag-prog">Envelope</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-02-envelope.png', 'Spatial Shot 02: Metric Envelope')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-02-envelope.png" alt="Shot 2">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Metric Floor Datum (y = 720)</div>
+        <div class="card-desc">Grounded 288px = 1m scale: warm plaster back wall (y=0..720), foreshortened hinoki floor planks (y=720..900), cedar baseboard.</div>
+        <div class="card-law">Law: 288px = 1m, datum y = 720px</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 03 / 08</span><span class="card-tag tag-prog">Apertures</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-03-apertures-fixtures.png', 'Spatial Shot 03: Shoji & Wall Fixtures')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-03-apertures-fixtures.png" alt="Shot 3">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Shoji Screen &amp; Menu Slats</div>
+        <div class="card-desc">Shoji sliding screen on left with bamboo garden silhouettes, hand-carved cedar menu boards, brass pendulum clock.</div>
+        <div class="card-law">Law: Phase 2 Apertures &amp; Phase 3 Fixtures</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 04 / 08</span><span class="card-tag tag-prog">Lighting</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-04-lighting-sunbeam.png', 'Spatial Shot 04: 34° Sunlight Beam')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-04-lighting-sunbeam.png" alt="Shot 4">
+      </div>
+      <div class="card-body">
+        <div class="card-title">34° Morning Sunlight Angle</div>
+        <div class="card-desc">Single key light vector entering through shoji screen, casting a volumetric sun shaft and elliptical floor light pool.</div>
+        <div class="card-law">Law: Single key light vector geometry</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 05 / 08</span><span class="card-tag tag-pass">Joinery</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-05-counter-joinery.png', 'Spatial Shot 05: Hinoki Counter Joinery')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-05-counter-joinery.png" alt="Shot 5">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Solid Hinoki Cypress Counter</div>
+        <div class="card-desc">Bar counter slab at y=490px (0.80m height), vertical wood slat apron, back storage shelves.</div>
+        <div class="card-law">Law: Metric casework grounding</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 06 / 08</span><span class="card-tag tag-pass">Props</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-06-coffee-props.png', 'Spatial Shot 06: Artisanal Coffee Props')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-06-coffee-props.png" alt="Shot 6">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Artisanal Coffee Equipment</div>
+        <div class="card-desc">Copper gooseneck kettle, triple brass V60 drip station with ceramic cones, amber bean jars, matcha bowl, cup with saucer.</div>
+        <div class="card-law">Law: Gibsonian prop affordances</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-step">SHOT 07 / 08</span><span class="card-tag tag-pass">Occlusion</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-07-occlusion-shadows.png', 'Spatial Shot 07: Occlusion Shadows')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-07-occlusion-shadows.png" alt="Shot 7">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Warm Indigo Contact Shadows</div>
+        <div class="card-desc">Deep contact occlusion drop shadows underneath counter slab, along the baseboard, and beneath each kettle and cup.</div>
+        <div class="card-law">Law: Colored contact drop shadows</div>
+      </div>
+    </div>
+
+    <div class="card" style="border-color: var(--pink); border-width: 3px;">
+      <div class="card-header" style="background: rgba(245, 130, 174, 0.15);"><span class="card-step">SHOT 08 / 08</span><span class="card-tag tag-final">★ Production</span></div>
+      <div class="card-viewport" onclick="openModal('examples/spatial/01-kyoto-kissaten/shots/shot-08-atmospheric-final.png', 'Spatial Shot 08: Masterpiece Kyoto Kissaten')">
+        <img src="examples/spatial/01-kyoto-kissaten/shots/shot-08-atmospheric-final.png" alt="Shot 8">
+      </div>
+      <div class="card-body">
+        <div class="card-title">Atmospheric Polish &amp; Stools</div>
+        <div class="card-desc">Bentwood stools touching floor datum at y=720px, curling coffee steam wisps, subtle architectural paper grain.</div>
+        <div class="card-law">Mastery: 100% Spatial Eval Passing</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3: AGENT ARCHITECTURE -->
+  <div id="grid-agent" class="grid" style="display: none;">
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 01</span><span class="card-tag tag-fail">0-Shot</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-01-zero-shot.png"></div><div class="card-body"><div class="card-title">Zero-Shot Clip-Art</div><div class="card-desc">Naive box diagram.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 02</span><span class="card-tag tag-prog">Wireframe</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-02-layout.png"></div><div class="card-body"><div class="card-title">Spatial Blueprint</div><div class="card-desc">4-Quadrant topology.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 03</span><span class="card-tag tag-prog">Kinematics</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-03-bowing.png"></div><div class="card-body"><div class="card-title">Wrist Bowing</div><div class="card-desc">Wood et al. inking.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 04</span><span class="card-tag tag-prog">Hierarchy</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-04-stroke-hierarchy.png"></div><div class="card-body"><div class="card-title">Stroke Weights</div><div class="card-desc">4.0px / 3.5px / 1.8px line tiers.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 05</span><span class="card-tag tag-pass">Washes</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-05-washes.png"></div><div class="card-body"><div class="card-title">Offset Washes</div><div class="card-desc">Underlay color bleeds.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 06</span><span class="card-tag tag-pass">Metaphors</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-06-connectors-metaphors.png"></div><div class="card-body"><div class="card-title">Metaphor Icons</div><div class="card-desc">Star crown, keyhole vault.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 07</span><span class="card-tag tag-pass">Typography</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-07-lettering-notes.png"></div><div class="card-body"><div class="card-title">Hand Lettering</div><div class="card-desc">Caveat font & annotations.</div></div></div>
+    <div class="card" style="border-color: var(--pink); border-width: 3px;"><div class="card-header"><span class="card-step">SHOT 08</span><span class="card-tag tag-final">★ Production</span></div><div class="card-viewport"><img src="examples/doodle/03-agent-architecture/shots/shot-08-paper-texture-final.png"></div><div class="card-body"><div class="card-title">Paper Texture Masterpiece</div><div class="card-desc">Zero-JS paper grain shader.</div></div></div>
+  </div>
+
+  <!-- SCENE 4: RAFT -->
+  <div id="grid-raft" class="grid" style="display: none;">
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 01</span><span class="card-tag tag-fail">0-Shot</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-01-zero-shot.svg"></div><div class="card-body"><div class="card-title">Zero-Shot Clip-Art</div><div class="card-desc">Naive geometry with clashing fills.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 02</span><span class="card-tag tag-prog">Wireframe</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-02-layout.svg"></div><div class="card-body"><div class="card-title">Spatial Blueprint</div><div class="card-desc">Balanced 3-node cluster topology.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 03</span><span class="card-tag tag-prog">Kinematics</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-03-bowing.svg"></div><div class="card-body"><div class="card-title">Wrist Bowing</div><div class="card-desc">Wood et al. chord normal bowing.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 04</span><span class="card-tag tag-prog">Hierarchy</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-04-stroke-hierarchy.svg"></div><div class="card-body"><div class="card-title">3-Tier Strokes</div><div class="card-desc">3.5px / 2.0px / 1.2px line weights.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 05</span><span class="card-tag tag-pass">Washes</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-05-washes.svg"></div><div class="card-body"><div class="card-title">Offset Washes</div><div class="card-desc">Washes in Phase 2 under ink.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 06</span><span class="card-tag tag-pass">Metaphors</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-06-connectors-metaphors.svg"></div><div class="card-body"><div class="card-title">Metaphor Wit</div><div class="card-desc">Leader crown, election timer dial.</div></div></div>
+    <div class="card"><div class="card-header"><span class="card-step">SHOT 07</span><span class="card-tag tag-pass">Typography</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-07-lettering-notes.svg"></div><div class="card-body"><div class="card-title">Hand Lettering</div><div class="card-desc">Caveat typography and notes.</div></div></div>
+    <div class="card" style="border-color: var(--pink); border-width: 3px;"><div class="card-header"><span class="card-step">SHOT 08</span><span class="card-tag tag-final">★ Production</span></div><div class="card-viewport"><img src="examples/doodle/01-raft-consensus/shots/shot-08-paper-texture-final.svg"></div><div class="card-body"><div class="card-title">Paper Texture Masterpiece</div><div class="card-desc">Zero-JS cotton rag paper shader.</div></div></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 id="modal-title">Inspection</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="Enlarged View">
+    </div>
+  </div>
+</div>
+
+<script>
+  function switchScene(scene) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    document.getElementById('grid-desk').style.display = scene === 'desk' ? 'grid' : 'none';
+    document.getElementById('grid-kissaten').style.display = scene === 'kissaten' ? 'grid' : 'none';
+    document.getElementById('grid-agent').style.display = scene === 'agent' ? 'grid' : 'none';
+    document.getElementById('grid-raft').style.display = scene === 'raft' ? 'grid' : 'none';
+  }
+
+  function openModal(src, title) {
+    document.getElementById('modal-img').src = src;
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>

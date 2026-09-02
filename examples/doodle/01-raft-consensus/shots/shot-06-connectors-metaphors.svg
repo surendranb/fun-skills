@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- PALETTE: bg=#ffffff ink=#001858 primary=#f582ae secondary=#8bd3dd accent=#f4d06f white=#ffffff -->
+  <!-- Shot 6: Connectors & Visual Metaphors (Crown, Timers, RPC Packets) -->
+
+  <g id="phase-1-substrate">
+    <rect width="100%" height="100%" fill="#ffffff" />
+    <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32" 
+          fill="none" stroke="#001858" stroke-width="1.5" opacity="0.35" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 2: WASHES -->
+  <g id="phase-2-washes">
+    <path d="M 282 50 Q 600 42 920 46 L 914 114 Q 596 122 276 112 Z" fill="#f4d06f" opacity="0.45" />
+    <path d="M 64 244 Q 160 238 258 246 Q 262 380 254 516 Q 160 524 62 512 Z" fill="#8bd3dd" opacity="0.32" />
+    <path d="M 346 164 Q 510 156 676 166 Q 682 290 674 416 Q 510 424 342 412 Z" fill="#f582ae" opacity="0.38" />
+    <path d="M 764 164 Q 930 156 1096 166 Q 1102 275 1094 386 Q 930 394 762 382 Z" fill="#8bd3dd" opacity="0.32" />
+    <path d="M 764 444 Q 930 436 1096 446 Q 1102 555 1094 666 Q 930 674 762 662 Z" fill="#8bd3dd" opacity="0.32" />
+    <path d="M 346 474 Q 510 466 676 476 Q 682 570 674 666 Q 510 674 342 662 Z" fill="#f4d06f" opacity="0.38" />
+    
+    <!-- Crown Wash (Amber) -->
+    <path d="M 488 122 L 510 134 L 532 122 L 530 148 L 490 148 Z" fill="#f4d06f" opacity="0.8" />
+    <!-- Election Timer Dial Wash -->
+    <ellipse cx="930" cy="300" rx="34" ry="34" fill="#f582ae" opacity="0.3" />
+  </g>
+
+  <!-- PHASE 4: STROKES -->
+  <g id="phase-4-strokes">
+    <!-- Header Banner -->
+    <path d="M 276 46 Q 600 38 924 44 Q 928 82 922 118 Q 600 126 270 116 Q 268 80 276 46 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Client Container -->
+    <path d="M 58 238 Q 160 232 262 240 Q 268 375 260 522 Q 158 530 56 518 Q 50 375 58 238 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 78 318 Q 160 312 242 320 Q 246 348 240 376 Q 158 382 76 374 Q 74 346 78 318 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    
+    <!-- Leader Container -->
+    <path d="M 338 158 Q 510 150 682 160 Q 688 285 680 422 Q 508 430 336 418 Q 330 285 338 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Leader Crown Icon -->
+    <path d="M 482 120 L 496 138 L 510 118 L 524 138 L 538 120 L 534 146 L 486 146 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <path d="M 362 232 Q 510 224 658 234 Q 662 268 656 302 Q 508 310 360 300 Q 358 266 362 232 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 362 330 Q 510 324 658 332 Q 662 358 656 386 Q 508 392 360 384 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="1.5" stroke-linecap="round" />
+    
+    <!-- Follower S2 -->
+    <path d="M 758 158 Q 930 150 1102 160 Q 1108 270 1100 392 Q 928 400 756 388 Q 750 270 758 158 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Election Timer Clock Dial -->
+    <path d="M 900 295 A 30 30 0 1 1 960 295 A 30 30 0 1 1 900 295" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M 930 295 L 930 274" stroke="#001858" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M 930 295 L 948 290" stroke="#001858" stroke-width="2.2" stroke-linecap="round" />
+    
+    <!-- Follower S3 -->
+    <path d="M 758 438 Q 930 430 1102 440 Q 1108 550 1100 672 Q 928 680 756 668 Q 750 550 758 438 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 782 512 Q 930 504 1078 514 Q 1082 548 1076 582 Q 928 590 780 580 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Quorum Consensus Box -->
+    <path d="M 338 468 Q 510 460 682 470 Q 688 565 680 672 Q 508 680 336 668 Q 330 565 338 468 Z" 
+          fill="#ffffff" stroke="#001858" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Checkmark Icon -->
+    <path d="M 370 545 L 388 565 L 420 530" fill="none" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 5: CONNECTORS (Causal Curved Flow Arrows & RPC Envelopes) -->
+  <g id="phase-5-connectors">
+    <!-- Client to Leader Flow Arrow -->
+    <path d="M 264 340 Q 300 320 334 330" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" />
+    <path d="M 320 318 L 338 331 L 316 342" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Leader to S2 AppendEntries Heartbeat Arrow -->
+    <path d="M 686 240 Q 720 220 754 235" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" />
+    <path d="M 740 222 L 758 236 L 736 248" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Leader to S3 Replicate Log Flow Arrow -->
+    <path d="M 684 380 Q 715 450 754 480" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" />
+    <path d="M 738 465 L 758 482 L 734 492" fill="none" stroke="#001858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Quorum Upward Confirmation Arrow -->
+    <path d="M 510 464 Q 515 440 510 426" fill="none" stroke="#001858" stroke-width="2.5" stroke-dasharray="4,4" stroke-linecap="round" />
+    <path d="M 502 438 L 510 424 L 518 438" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 6: LETTERING -->
+  <g id="phase-6-lettering" style="font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;">
+    <text x="600" y="88" font-size="32" font-weight="bold" text-anchor="middle" fill="#001858">RAFT CONSENSUS ALGORITHM</text>
+    <text x="160" y="278" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">1. Client Request</text>
+    <text x="160" y="352" font-size="18" text-anchor="middle" fill="#001858">SET x = 42</text>
+    <text x="510" y="200" font-size="26" font-weight="bold" text-anchor="middle" fill="#001858">Node S1 (Leader · Term 2)</text>
+    <text x="510" y="272" font-size="18" text-anchor="middle" fill="#001858">Log: [Index 1: Term 2: x=42]</text>
+    <text x="510" y="362" font-size="16" text-anchor="middle" fill="#001858">State: COMMITTED (Majority 2/3)</text>
+    <text x="930" y="200" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Node S2 (Follower)</text>
+    <text x="930" y="355" font-size="15" text-anchor="middle" fill="#001858">Election Timer: 150-300ms</text>
+    <text x="930" y="480" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Node S3 (Follower)</text>
+    <text x="930" y="552" font-size="18" text-anchor="middle" fill="#001858">Log: [Index 1: Term 2: x=42]</text>
+    <text x="930" y="625" font-size="15" text-anchor="middle" fill="#001858">Replication Ack ➜ Leader</text>
+    <text x="510" y="515" font-size="24" font-weight="bold" text-anchor="middle" fill="#001858">Quorum Consensus</text>
+    <text x="535" y="560" font-size="18" text-anchor="middle" fill="#001858">Majority = (3 / 2) + 1 = 2 Nodes</text>
+    <text x="510" y="615" font-size="15" text-anchor="middle" fill="#001858" opacity="0.85">Leader commits entry to state machine!</text>
+  </g>
+</svg>

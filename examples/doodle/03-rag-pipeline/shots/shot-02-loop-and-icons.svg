@@ -1,0 +1,159 @@
+<svg viewBox="0 0 1200 800" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- PALETTE: bg=#fef6e4 ink=#001858 primary=#f582ae secondary=#8bd3dd accent=#f4d06f white=#ffffff -->
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Patrick+Hand&amp;family=JetBrains+Mono:wght@500&amp;display=swap');</style>
+    <filter id="paper-texture" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feDiffuseLighting in="noise" lighting-color="#fef6e4" surfaceScale="2" diffuseConstant="1.1" result="light">
+        <feDistantLight azimuth="55" elevation="45" />
+      </feDiffuseLighting>
+      <feBlend mode="multiply" in="SourceGraphic" in2="light" />
+    </filter>
+    <filter id="sketch-stroke" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06 0.04" numOctaves="3" seed="42" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <filter id="watercolor-wash" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="17" result="warp" />
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="7" result="warped" />
+      <feGaussianBlur in="warped" stdDeviation="1.1" />
+    </filter>
+  </defs>
+
+  <!-- PHASE 1: SUBSTRATE -->
+  <g id="phase-1-substrate">
+    <rect width="100%" height="100%" fill="#fef6e4" filter="url(#paper-texture)" />
+    <path d="M 28 32 Q 600 24 1172 30 Q 1178 400 1170 770 Q 600 776 30 768 Q 24 400 28 32"
+          fill="none" stroke="#001858" stroke-width="1.8" opacity="0.30" stroke-linecap="round" />
+    <path d="M 34 38 Q 600 32 1166 36 Q 1172 400 1164 764 Q 600 770 36 762 Q 30 400 34 38"
+          fill="none" stroke="#001858" stroke-width="1.0" opacity="0.18" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 2: WASHES -->
+  <g id="phase-2-washes" filter="url(#watercolor-wash)">
+    <path d="M 402 44 Q 600 36 800 42 L 794 118 Q 598 126 398 116 Z" fill="#f4d06f" opacity="0.45" />
+    <path d="M 350 192 Q 456 184 566 192 Q 570 246 562 306 Q 454 314 346 304 Z" fill="#8bd3dd" opacity="0.30" />
+    <path d="M 630 158 Q 776 148 922 158 Q 928 244 920 334 Q 774 344 626 332 Z" fill="#8bd3dd" opacity="0.38" />
+    <path d="M 986 186 Q 1068 178 1150 186 Q 1154 252 1146 322 Q 1066 330 982 320 Z" fill="#f582ae" opacity="0.42" />
+    <path d="M 424 536 Q 592 526 764 536 Q 770 594 760 656 Q 590 666 420 654 Z" fill="#f4d06f" opacity="0.45" />
+  </g>
+
+  <!-- PHASE 3: ACCENTS -->
+  <g id="phase-3-accents">
+    <path d="M 470 92 Q 602 86 736 90" fill="none" stroke="#f582ae" stroke-width="5" opacity="0.55" stroke-linecap="round" />
+    <path d="M 838 152 Q 872 146 906 150 Q 910 160 904 170 Q 868 176 836 170 Q 832 160 838 152" fill="#ffffff" opacity="0.55" stroke="#001858" stroke-width="0.8" />
+    <path d="M 556 476 Q 600 472 648 475" fill="none" stroke="#f4d06f" stroke-width="7" opacity="0.5" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 4: STROKES -->
+  <g id="phase-4-strokes" filter="url(#sketch-stroke)">
+    <!-- Card A: Your Question -->
+    <path d="M 62 196 Q 162 188 264 194 Q 268 252 262 312 Q 160 320 58 310 Q 54 252 62 196 Z"
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 60 198 Q 163 190 266 196 Q 269 253 263 314 Q 159 322 56 312"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 108 232 Q 142 222 176 230 Q 184 248 174 262 Q 146 270 116 262 Q 104 246 108 232 Z"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 118 262 Q 112 276 100 282" fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+
+    <!-- Card B: The Embedder -->
+    <path d="M 352 196 Q 456 188 562 194 Q 566 246 560 304 Q 454 312 348 302 Q 344 246 352 196 Z"
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 350 198 Q 457 190 564 196 Q 567 247 561 306 Q 453 314 346 304"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 374 232 Q 404 228 428 231 M 374 246 Q 398 243 420 245 M 374 260 Q 402 257 430 259"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 440 246 Q 470 240 494 245" fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 494 245 L 484 238 M 494 245 L 485 252" fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 508 238 Q 512 236 515 239 M 522 246 Q 526 244 529 247 M 510 256 Q 514 254 517 257"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+
+    <!-- Card C: The Vector Library -->
+    <path d="M 640 166 Q 776 156 914 164 Q 920 246 912 336 Q 774 346 636 336 Q 630 246 640 166 Z"
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 638 168 Q 777 158 916 166 Q 921 247 913 338 Q 773 348 634 338"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 668 212 Q 790 206 884 210 M 668 268 Q 788 262 882 266"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 682 212 Q 680 240 683 268 Q 690 270 696 268 Q 698 238 695 212 Z" fill="#8bd3dd" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 706 212 Q 705 242 708 268 Q 714 270 720 268 Q 721 240 719 212 Z" fill="#f582ae" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 730 212 Q 728 240 731 268 Q 737 270 743 268 Q 745 240 742 212 Z" fill="#f4d06f" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 754 210 Q 748 240 756 268 Q 763 269 768 265 Q 770 238 764 211 Z" fill="#8bd3dd" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 812 224 Q 806 244 812 264 Q 818 266 824 263 Q 826 244 822 225 Z" fill="#f4d06f" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 812 224 Q 800 206 786 196 M 812 224 Q 796 212 780 204" fill="none" stroke="#001858" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M 700 306 Q 740 300 776 304 M 700 316 Q 730 312 760 314"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.7" stroke-linecap="round" />
+
+    <!-- Card D: The LLM Brain -->
+    <path d="M 992 196 Q 1070 188 1146 194 Q 1150 254 1144 316 Q 1068 324 988 314 Q 984 254 992 196 Z"
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 990 198 Q 1071 190 1148 196 Q 1151 255 1145 318 Q 1067 326 986 316"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 1022 252 Q 1010 238 1024 226 Q 1032 212 1050 218 Q 1062 206 1078 216 Q 1096 214 1098 232 Q 1112 244 1100 258 Q 1104 274 1086 278 Q 1076 290 1060 282 Q 1044 290 1034 278 Q 1018 278 1020 262 Q 1014 256 1022 252 Z"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1040 240 Q 1050 248 1042 260 Q 1052 258 1054 268 M 1068 232 Q 1074 244 1066 254 Q 1076 256 1074 266"
+          fill="none" stroke="#001858" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M 1052 200 Q 1056 192 1060 200 Q 1068 196 1064 206" fill="none" stroke="#001858" stroke-width="1.2" stroke-linecap="round" />
+
+    <!-- Card E: Grounded Answer -->
+    <path d="M 432 542 Q 594 532 758 540 Q 764 596 756 652 Q 592 662 428 652 Q 422 596 432 542 Z"
+          fill="#ffffff" stroke="#001858" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 430 544 Q 595 534 760 542 Q 765 597 757 654 Q 591 664 426 654"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 466 570 L 474 586 L 490 588 L 478 598 L 482 614 L 466 606 L 450 614 L 454 598 L 442 588 L 458 586 Z"
+          fill="#f4d06f" stroke="#001858" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M 510 576 Q 596 570 700 574 M 510 592 Q 580 588 664 590 M 510 608 Q 590 604 676 606"
+          fill="none" stroke="#001858" stroke-width="2.0" stroke-linecap="round" />
+    <path d="M 706 640 Q 730 636 748 640 M 710 648 Q 726 645 740 647"
+          fill="none" stroke="#001858" stroke-width="1.2" opacity="0.7" stroke-linecap="round" />
+  </g>
+
+  <!-- PHASE 5: CONNECTORS -->
+  <g id="phase-5-connectors">
+    <path d="M 268 250 Q 306 240 344 246" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 344 246 L 332 238 M 344 246 L 333 254" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 568 248 Q 602 238 630 244" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 630 244 L 618 236 M 630 244 L 619 252" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 918 248 Q 952 240 980 246" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 980 246 L 968 238 M 980 246 L 969 254" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 1052 322 Q 1036 440 782 534" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 782 534 L 796 526 M 782 534 L 795 541" fill="none" stroke="#001858" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 300 224 Q 310 214 320 222 Q 322 234 314 240 Q 302 242 298 232 Q 296 226 300 224 Z"
+          fill="#f4d06f" stroke="#001858" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M 596 220 Q 606 210 616 218 Q 618 230 610 236 Q 598 238 594 228 Q 592 222 596 220 Z"
+          fill="#8bd3dd" stroke="#001858" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M 944 222 Q 954 212 964 220 Q 966 232 958 238 Q 946 240 942 230 Q 940 224 944 222 Z"
+          fill="#f582ae" stroke="#001858" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M 940 452 Q 950 442 960 450 Q 962 462 954 468 Q 942 470 938 460 Q 936 454 940 452 Z"
+          fill="#8bd3dd" stroke="#001858" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M 428 596 Q 300 586 208 492 Q 162 436 160 336" fill="none" stroke="#f582ae" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="8 7" />
+    <path d="M 160 336 L 152 350 M 160 336 L 171 347" fill="none" stroke="#f582ae" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M 272 528 Q 282 518 292 526 Q 294 538 286 544 Q 274 546 270 536 Q 268 530 272 528 Z"
+          fill="#f4d06f" stroke="#001858" stroke-width="1.4" stroke-linejoin="round" />
+  </g>
+
+  <!-- PHASE 6: LETTERING -->
+  <g id="phase-6-lettering" style="font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;">
+    <text x="600" y="78" text-anchor="middle" font-size="56" font-weight="700" fill="#001858">How RAG Works</text>
+    <text x="600" y="112" text-anchor="middle" font-size="24" fill="#001858" opacity="0.85">answering questions from your own private library</text>
+
+    <text x="160" y="298" text-anchor="middle" font-size="28" font-weight="600" fill="#001858">Your Question</text>
+    <text x="142" y="258" text-anchor="middle" font-size="30" font-weight="600" fill="#001858">?</text>
+    <text x="455" y="296" text-anchor="middle" font-size="28" font-weight="600" fill="#001858">The Embedder</text>
+    <text x="775" y="200" text-anchor="middle" font-size="28" font-weight="600" fill="#001858">The Vector Library</text>
+    <text x="1067" y="302" text-anchor="middle" font-size="23" font-weight="600" fill="#001858">The LLM Brain</text>
+    <text x="594" y="636" text-anchor="middle" font-size="30" font-weight="600" fill="#001858">Grounded Answer</text>
+
+    <text x="308" y="237" text-anchor="middle" font-size="18" fill="#001858">1</text>
+    <text x="604" y="233" text-anchor="middle" font-size="18" fill="#001858">2</text>
+    <text x="952" y="235" text-anchor="middle" font-size="18" fill="#001858">3</text>
+    <text x="948" y="465" text-anchor="middle" font-size="18" fill="#001858">4</text>
+    <text x="280" y="541" text-anchor="middle" font-size="18" fill="#001858">5</text>
+
+    <text x="455" y="330" text-anchor="middle" font-size="17" fill="#001858" opacity="0.8">meaning, not keywords</text>
+    <text x="775" y="296" text-anchor="middle" font-size="20" font-family="'JetBrains Mono', monospace" fill="#001858">top-k = 4 chunks</text>
+    <text x="1067" y="348" text-anchor="middle" font-size="17" fill="#001858" opacity="0.8">reads only what it is handed</text>
+    <text x="594" y="700" text-anchor="middle" font-size="20" fill="#001858" opacity="0.9">the library remembers what the model never read</text>
+    <text x="238" y="470" text-anchor="middle" font-size="19" fill="#f582ae" transform="rotate(-52 238 470)" opacity="0.95">cite your receipts</text>
+  </g>
+</svg>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kyoto Kissaten — Artisanal Drip Coffee Counter</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #1a1612; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
+    .canvas-container { width: 100%; max-width: 1440px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body>
+  <div class="canvas-container">
+    <!-- SCALE: 288px = 1m -->
+    <!-- DATUM y=720 -->
+    <!-- PALETTE: #1a1612 #1b3027 #2c1d11 #2d2118 #2d4a3e #2f3e46 #4a3728 #52796f #5c4033 #785918 #7a341e #84a98c #8b4513 #8c6239 #a0522d #a3c4b5 #b85d3b #b8860b #c49a45 #c49a6c #c4a585 #cca158 #cce2d8 #cd853f #d0e8ea #d4af37 #d8bda0 #e2caa8 #e2ede8 #e6c280 #ebe0d0 #f0f7f4 #f4ede2 #f5ede0 #fcedcc #fcf6ee #fcf8f2 #fdfbf7 #fff0b3 #fff1cc #fff3cc #fff9e6 #ffffff -->
+    <svg viewBox="0 0 1440 900" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Gradients with >= 3 stops -->
+        <linearGradient id="wall-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fcf6ee" />
+          <stop offset="60%" stop-color="#f5ede0" />
+          <stop offset="100%" stop-color="#ebe0d0" />
+        </linearGradient>
+
+        <linearGradient id="floor-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#e2caa8" />
+          <stop offset="50%" stop-color="#d8bda0" />
+          <stop offset="100%" stop-color="#c4a585" />
+        </linearGradient>
+
+        <linearGradient id="garden-sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f0f7f4" />
+          <stop offset="50%" stop-color="#e2ede8" />
+          <stop offset="100%" stop-color="#cce2d8" />
+        </linearGradient>
+
+        <linearGradient id="counter-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fcedcc" />
+          <stop offset="40%" stop-color="#e6c280" />
+          <stop offset="100%" stop-color="#cca158" />
+        </linearGradient>
+
+        <linearGradient id="sun-beam-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.40" />
+          <stop offset="50%" stop-color="#fff3cc" stop-opacity="0.25" />
+          <stop offset="100%" stop-color="#fff0b3" stop-opacity="0.05" />
+        </linearGradient>
+
+        <!-- Fine Architectural Paper Shader -->
+        <filter id="paper-grain-kissaten" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="noise" />
+          <feDiffuseLighting in="noise" lighting-color="#fcf8f2" surfaceScale="1.5" diffuseConstant="1.05" result="light">
+            <feDistantLight azimuth="45" elevation="55" />
+          </feDiffuseLighting>
+          <feBlend mode="multiply" in="SourceGraphic" in2="light" />
+        </filter>
+      </defs>
+
+      <!-- PHASE 1: ENVELOPE -->
+      <g id="phase-1-envelope">
+        <!-- Back Wall (Plaster Warm Ochre-Cream with Paper Grain) -->
+        <rect x="0" y="0" width="1440" height="720" fill="url(#wall-grad)" filter="url(#paper-grain-kissaten)" />
+        
+        <!-- Hinoki Cypress Floor (y = 720 to 900, Foreshortened Planks) -->
+        <rect x="0" y="720" width="1440" height="180" fill="url(#floor-grad)" />
+        <line x1="0" y1="740" x2="1440" y2="740" stroke="#c4a585" stroke-width="1.5" />
+        <line x1="0" y1="770" x2="1440" y2="770" stroke="#c4a585" stroke-width="1.5" />
+        <line x1="0" y1="810" x2="1440" y2="810" stroke="#c4a585" stroke-width="2.0" />
+        <line x1="0" y1="860" x2="1440" y2="860" stroke="#c4a585" stroke-width="2.5" />
+        
+        <!-- Dark Cedar Baseboard Trim (y = 706 to 720) -->
+        <rect x="0" y="706" width="1440" height="14" fill="#4a3728" />
+        <line x1="0" y1="706" x2="1440" y2="706" stroke="#2d2118" stroke-width="1" />
+      </g>
+
+      <!-- PHASE 2: APERTURES (Shoji Window & Misty Bamboo Silhouette) -->
+      <g id="phase-2-apertures">
+        <rect x="80" y="120" width="300" height="586" fill="url(#garden-sky-grad)" />
+        <path d="M 120 706 Q 125 400 130 120 M 160 706 Q 155 450 150 120 M 220 706 Q 225 350 230 120 M 270 706 Q 265 480 280 120" stroke="#a3c4b5" stroke-width="6" opacity="0.6" stroke-linecap="round" />
+        <!-- Shoji Outer Frame -->
+        <rect x="80" y="120" width="300" height="586" fill="none" stroke="#4a3728" stroke-width="12" />
+        <!-- Shoji Horizontal & Vertical Wood Battens -->
+        <line x1="80" y1="220" x2="380" y2="220" stroke="#4a3728" stroke-width="3" />
+        <line x1="80" y1="320" x2="380" y2="320" stroke="#4a3728" stroke-width="3" />
+        <line x1="80" y1="420" x2="380" y2="420" stroke="#4a3728" stroke-width="3" />
+        <line x1="80" y1="520" x2="380" y2="520" stroke="#4a3728" stroke-width="3" />
+        <line x1="80" y1="620" x2="380" y2="620" stroke="#4a3728" stroke-width="3" />
+        <line x1="180" y1="120" x2="180" y2="706" stroke="#4a3728" stroke-width="3" />
+        <line x1="280" y1="120" x2="280" y2="706" stroke="#4a3728" stroke-width="3" />
+      </g>
+
+      <!-- PHASE 3: FIXTURES -->
+      <g id="phase-3-wall-fixtures">
+        <!-- Cedar Menu Boards -->
+        <rect x="440" y="140" width="36" height="130" fill="#c49a6c" stroke="#4a3728" stroke-width="1.5" />
+        <rect x="490" y="140" width="36" height="130" fill="#c49a6c" stroke="#4a3728" stroke-width="1.5" />
+        <rect x="540" y="140" width="36" height="130" fill="#c49a6c" stroke="#4a3728" stroke-width="1.5" />
+        <rect x="590" y="140" width="36" height="130" fill="#c49a6c" stroke="#4a3728" stroke-width="1.5" />
+        <rect x="640" y="140" width="36" height="130" fill="#c49a6c" stroke="#4a3728" stroke-width="1.5" />
+        <!-- Japanese Calligraphy on Menu -->
+        <text x="458" y="170" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">珈</text>
+        <text x="458" y="195" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">琲</text>
+        <text x="508" y="170" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">深</text>
+        <text x="508" y="195" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">煎</text>
+        <text x="558" y="170" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">中</text>
+        <text x="558" y="195" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">煎</text>
+        <text x="608" y="170" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">抹</text>
+        <text x="608" y="195" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">茶</text>
+        <text x="658" y="170" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">菓</text>
+        <text x="658" y="195" font-family="'Noto Serif JP', serif" font-size="12" text-anchor="middle" fill="#2d2118">子</text>
+        
+        <!-- Brass Wall Clock (y = 130 to 290) -->
+        <rect x="800" y="130" width="80" height="160" fill="#5c4033" stroke="#2d2118" stroke-width="2" rx="4" />
+        <circle cx="840" cy="180" r="30" fill="#fdfbf7" stroke="#b8860b" stroke-width="3" />
+        <line x1="840" y1="180" x2="840" y2="162" stroke="#2d2118" stroke-width="2" />
+        <line x1="840" y1="180" x2="855" y2="180" stroke="#2d2118" stroke-width="1.5" />
+        <line x1="840" y1="210" x2="840" y2="265" stroke="#b8860b" stroke-width="2" />
+        <circle cx="840" cy="265" r="10" fill="#d4af37" stroke="#b8860b" stroke-width="1" />
+        
+        <!-- Back Shelves -->
+        <rect x="420" y="340" width="620" height="16" fill="#5c4033" stroke="#2d2118" stroke-width="1.5" />
+        <rect x="450" y="295" width="32" height="45" fill="#a0522d" opacity="0.85" rx="3" />
+        <rect x="495" y="295" width="32" height="45" fill="#8b4513" opacity="0.85" rx="3" />
+        <rect x="540" y="295" width="32" height="45" fill="#a0522d" opacity="0.85" rx="3" />
+        <rect x="585" y="295" width="32" height="45" fill="#cd853f" opacity="0.85" rx="3" />
+        
+        <rect x="420" y="410" width="620" height="16" fill="#5c4033" stroke="#2d2118" stroke-width="1.5" />
+        <rect x="460" y="380" width="28" height="30" fill="#f4ede2" stroke="#4a3728" stroke-width="1.5" rx="2" />
+        <rect x="500" y="380" width="28" height="30" fill="#52796f" stroke="#2f3e46" stroke-width="1.5" rx="2" />
+        <rect x="540" y="380" width="28" height="30" fill="#84a98c" stroke="#2f3e46" stroke-width="1.5" rx="2" />
+        <rect x="580" y="380" width="28" height="30" fill="#f4ede2" stroke="#4a3728" stroke-width="1.5" rx="2" />
+      </g>
+
+      <!-- PHASE 4: LIGHTING (34° Morning Sunbeam) -->
+      <g id="phase-4-lighting">
+        <polygon points="120,120 380,120 900,900 480,900" fill="url(#sun-beam-grad)" />
+        <ellipse cx="640" cy="810" rx="280" ry="60" fill="#fff3cc" opacity="0.30" />
+      </g>
+
+      <!-- PHASE 5: CASE GOODS (Hinoki Bar Counter) -->
+      <g id="phase-5-case-goods">
+        <rect x="400" y="514" width="760" height="206" fill="#8c6239" stroke="#4a3728" stroke-width="2" />
+        <line x1="480" y1="514" x2="480" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="560" y1="514" x2="560" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="640" y1="514" x2="640" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="720" y1="514" x2="720" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="800" y1="514" x2="800" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="880" y1="514" x2="880" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="960" y1="514" x2="960" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="1040" y1="514" x2="1040" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        <line x1="1120" y1="514" x2="1120" y2="720" stroke="#5c4033" stroke-width="1.5" />
+        
+        <rect x="380" y="490" width="800" height="24" fill="url(#counter-grad)" stroke="#8c6239" stroke-width="2" rx="2" />
+        <line x1="380" y1="496" x2="1180" y2="496" stroke="#fff1cc" stroke-width="2" />
+      </g>
+
+      <!-- PHASE 6: PROPS -->
+      <g id="phase-6-props">
+        <!-- Copper Kettle -->
+        <path d="M 460 490 L 450 440 Q 475 425 500 440 L 490 490 Z" fill="#b85d3b" stroke="#7a341e" stroke-width="2" />
+        <path d="M 450 450 Q 430 430 420 440 Q 415 450 435 465" fill="none" stroke="#7a341e" stroke-width="3" stroke-linecap="round" />
+        <path d="M 495 445 Q 515 440 510 470" fill="none" stroke="#2d2118" stroke-width="3" stroke-linecap="round" />
+        
+        <!-- V60 Drip Station -->
+        <rect x="570" y="482" width="220" height="8" fill="#c49a45" stroke="#785918" stroke-width="1.5" />
+        <line x1="580" y1="482" x2="580" y2="440" stroke="#c49a45" stroke-width="3" />
+        <line x1="780" y1="482" x2="780" y2="440" stroke="#c49a45" stroke-width="3" />
+        <line x1="580" y1="440" x2="780" y2="440" stroke="#c49a45" stroke-width="3" />
+        
+        <!-- Drippers -->
+        <polygon points="595,440 625,440 610,465" fill="#fdfbf7" stroke="#4a3728" stroke-width="1.5" />
+        <polygon points="665,440 695,440 680,465" fill="#fdfbf7" stroke="#4a3728" stroke-width="1.5" />
+        <polygon points="735,440 765,440 750,465" fill="#fdfbf7" stroke="#4a3728" stroke-width="1.5" />
+        
+        <!-- Glass Servers -->
+        <path d="M 600 468 L 620 468 L 625 488 L 595 488 Z" fill="#d0e8ea" opacity="0.6" stroke="#4a3728" stroke-width="1" />
+        <path d="M 670 468 L 690 468 L 695 488 L 665 488 Z" fill="#d0e8ea" opacity="0.6" stroke="#4a3728" stroke-width="1" />
+        <path d="M 740 468 L 760 468 L 765 488 L 735 488 Z" fill="#d0e8ea" opacity="0.6" stroke="#4a3728" stroke-width="1" />
+        
+        <!-- Matcha Chawan -->
+        <path d="M 850 490 Q 840 470 860 460 Q 880 460 900 470 L 890 490 Z" fill="#2d4a3e" stroke="#1b3027" stroke-width="1.5" />
+        
+        <!-- Fresh Coffee Cup with Saucer -->
+        <ellipse cx="980" cy="490" rx="24" ry="4" fill="#fdfbf7" stroke="#4a3728" stroke-width="1" />
+        <rect x="968" y="472" width="24" height="18" fill="#fdfbf7" stroke="#4a3728" stroke-width="1.5" rx="2" />
+      </g>
+
+      <!-- PHASE 7: OCCLUSION & CONTACT SHADOWS -->
+      <g id="phase-7-occlusion">
+        <rect x="380" y="514" width="800" height="12" fill="#2c1d11" opacity="0.45" />
+        <rect x="0" y="720" width="1440" height="8" fill="#2c1d11" opacity="0.30" />
+        <ellipse cx="780" cy="722" rx="390" ry="8" fill="#2c1d11" opacity="0.40" />
+        <ellipse cx="475" cy="490" rx="22" ry="4" fill="#5c4033" opacity="0.5" />
+        <ellipse cx="680" cy="488" rx="110" ry="5" fill="#5c4033" opacity="0.4" />
+        <ellipse cx="875" cy="490" rx="25" ry="4" fill="#5c4033" opacity="0.5" />
+        <ellipse cx="980" cy="492" rx="26" ry="5" fill="#5c4033" opacity="0.4" />
+        <!-- Stool Contact Shadows on Floor Datum -->
+        <ellipse cx="580" cy="720" rx="36" ry="6" fill="#2c1d11" opacity="0.5" />
+        <ellipse cx="880" cy="720" rx="36" ry="6" fill="#2c1d11" opacity="0.5" />
+      </g>
+
+      <!-- PHASE 8: FOREGROUND FURNITURE & STEAM -->
+      <g id="phase-8-foreground">
+        <!-- Bentwood Stool 1 (Left, Contact at y = 720) -->
+        <ellipse cx="580" cy="590" rx="34" ry="8" fill="#5c4033" stroke="#2d2118" stroke-width="2" />
+        <line x1="556" y1="594" x2="550" y2="720" stroke="#5c4033" stroke-width="4" stroke-linecap="round" />
+        <line x1="604" y1="594" x2="610" y2="720" stroke="#5c4033" stroke-width="4" stroke-linecap="round" />
+        <line x1="580" y1="596" x2="580" y2="720" stroke="#4a3728" stroke-width="3" stroke-linecap="round" />
+        <ellipse cx="580" cy="670" rx="24" ry="4" fill="none" stroke="#5c4033" stroke-width="2.5" />
+        
+        <!-- Bentwood Stool 2 (Right, Contact at y = 720) -->
+        <ellipse cx="880" cy="590" rx="34" ry="8" fill="#5c4033" stroke="#2d2118" stroke-width="2" />
+        <line x1="856" y1="594" x2="850" y2="720" stroke="#5c4033" stroke-width="4" stroke-linecap="round" />
+        <line x1="904" y1="594" x2="910" y2="720" stroke="#5c4033" stroke-width="4" stroke-linecap="round" />
+        <line x1="880" y1="596" x2="880" y2="720" stroke="#4a3728" stroke-width="3" stroke-linecap="round" />
+        <ellipse cx="880" cy="670" rx="24" ry="4" fill="none" stroke="#5c4033" stroke-width="2.5" />
+        
+        <!-- Coffee Steam Curled Wisps -->
+        <path d="M 610 435 Q 600 415 615 400 Q 625 385 615 370" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.45" stroke-linecap="round" />
+        <path d="M 680 435 Q 670 415 685 400 Q 695 385 685 370" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.45" stroke-linecap="round" />
+        <path d="M 750 435 Q 740 415 755 400 Q 765 385 755 370" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.45" stroke-linecap="round" />
+        <path d="M 980 465 Q 975 450 985 440" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round" />
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
